@@ -1,0 +1,56 @@
+[
+  {
+    "filename": "projects/sample-project/input/references/Lust Is Killing You..mp4",
+    "duration": 200.305442,
+    "sizeMb": "6.88",
+    "bitrateKbps": 288,
+    "video": {
+      "codec": "h264",
+      "width": 1280,
+      "height": 720,
+      "fps": "30/1",
+      "pixFmt": "yuv420p"
+    },
+    "audio": {
+      "hasAudio": true,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 2
+    }
+  },
+  {
+    "filename": "projects/sample-project/input/references/LUST VS LOVE _ An Animated Short Film.mp4",
+    "duration": 171.048299,
+    "sizeMb": "9.83",
+    "bitrateKbps": 482,
+    "video": {
+      "codec": "h264",
+      "width": 1280,
+      "height": 720,
+      "fps": "30/1",
+      "pixFmt": "yuv420p"
+    },
+    "audio": {
+      "hasAudio": true,
+      "codec": "aac",
+      "sampleRate": "44100",
+      "channels": 2
+    }
+  },
+  {
+    "filename": "projects/sample-project/input/assets/captions_subtle_BLACK_screen-blend.mp4",
+    "duration": 200,
+    "sizeMb": "5.50",
+    "bitrateKbps": 231,
+    "video": {
+      "codec": "h264",
+      "width": 1920,
+      "height": 1080,
+      "fps": "30/1",
+      "pixFmt": "yuv420p"
+    },
+    "audio": {
+      "hasAudio": false
+    }
+  }
+]

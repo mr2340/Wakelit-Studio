@@ -1,0 +1,47 @@
+{
+  "system": {
+    "name": "GHD-AUTOMATED-STUDIO",
+    "version": "1.0.0",
+    "logLevel": "info"
+  },
+  "chrome": {
+    "executablePath": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+    "profileDir": "./chrome-profile",
+    "useExistingUserProfile": false,
+    "cdpPort": 9222,
+    "headless": false,
+    "viewport": null,
+    "args": [
+      "--no-first-run",
+      "--no-default-browser-check",
+      "--start-maximized"
+    ]
+  },
+  "flow": {
+    "url": "https://flow.google.com/project/a908dd54-b9dd-47e8-8bf9-1d76da938148",
+    "defaultModel": "Flow Omni",
+    "defaultClipDuration": 10,
+    "generationTimeoutMs": 360000,
+    "cooldownBetweenGenerationsMs": 5000,
+    "maxRetries": 3,
+    "diagnosticMode": true
+  },
+  "ffmpeg": {
+    "ffmpegPath": "ffmpeg",
+    "ffprobePath": "ffprobe",
+    "defaultResolution": {
+      "width": 1920,
+      "height": 1080
+    },
+    "fps": 30,
+    "videoCodec": "libx264",
+    "audioCodec": "aac",
+    "videoBitrate": "8000k",
+    "audioBitrate": "192k"
+  },
+  "paths": {
+    "projectsDir": "./projects",
+    "knowledgeDir": "./knowledge",
+    "exportsDir": "./exports"
+  }
+}

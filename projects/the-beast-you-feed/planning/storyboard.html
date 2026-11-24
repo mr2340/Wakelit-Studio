@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WAKELIT Storyboard: The Beast You Feed Every Night</title>
+  <style>
+    :root {
+      --bg: #090D14;
+      --card-bg: #121824;
+      --border: #1E2838;
+      --amber: #E89D42;
+      --blue: #64B5F6;
+      --text: #EDE6D6;
+      --text-dim: #8A98A8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 30px 20px;
+      line-height: 1.5;
+    }
+    .header {
+      max-width: 1400px;
+      margin: 0 auto 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .header h1 {
+      font-size: 28px;
+      color: var(--amber);
+      letter-spacing: -0.5px;
+    }
+    .header p {
+      color: var(--text-dim);
+      font-size: 15px;
+      margin-top: 6px;
+    }
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+      font-size: 13px;
+    }
+    .meta-pill {
+      background: #172130;
+      padding: 6px 12px;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+    .storyboard-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+      gap: 25px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    .scene-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .scene-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--amber);
+    }
+    .card-header {
+      display: flex;
+      gap: 8px;
+      padding: 12px 14px;
+      background: #0E141E;
+      border-bottom: 1px solid var(--border);
+    }
+    .badge {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+    .scene-badge { background: var(--amber); color: #000; }
+    .duration-badge { background: #1F2A3C; color: var(--blue); }
+    .shot-badge { background: #263346; color: #FFF; margin-left: auto; }
+    .preview-frame {
+      width: 100%;
+      background: #000;
+      border-bottom: 1px solid var(--border);
+      line-height: 0;
+    }
+    .card-body {
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+    .beat-title {
+      font-size: 16px;
+      color: #FFF;
+      font-weight: 600;
+    }
+    .detail-row {
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+    .detail-row .label {
+      color: #718296;
+      font-weight: 600;
+      display: inline-block;
+      width: 85px;
+    }
+    .detail-row .val {
+      color: #CFD8DC;
+    }
+    .caption-box {
+      margin-top: auto;
+      padding: 10px 12px;
+      background: #0B101A;
+      border-radius: 6px;
+      border-left: 3px solid var(--amber);
+      font-size: 13px;
+      font-style: italic;
+      color: #FFF;
+    }
+    .caption-label {
+      color: var(--amber);
+      font-style: normal;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin-right: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>WAKELIT MASTER STORYBOARD: The Beast You Feed Every Night</h1>
+    <p>At 1:07 AM, a paralyzed young man repeatedly chooses comfort over his dormant ambitions, fueling an obsidian creature of avoidance until silence forces a choice.</p>
+    <div class="meta-bar">
+      <div class="meta-pill"><strong>Format:</strong> 2.39:1 Anamorphic (Letterboxed 1920x1080, 96px top/bottom mattes)</div>
+      <div class="meta-pill"><strong>Total Scenes:</strong> 12</div>
+      <div class="meta-pill"><strong>Runtime:</strong> 150s (~2.5 min)</div>
+      <div class="meta-pill"><strong>Protagonist:</strong> Ayo (#613729 head, #D2A23E mustard hoodie)</div>
+      <div class="meta-pill"><strong>Camera Law:</strong> Locked Static Tripod (NO artificial Ken Burns zoom)</div>
+    </div>
+  </div>
+
+  <div class="storyboard-grid">
+    
+      <div class="scene-card" id="scene-1">
+        <div class="card-header">
+          <span class="badge scene-badge">SCENE 01</span>
+          <span class="badge duration-badge">8s (00:00 - 00:08)</span>
+          <span class="badge shot-badge">Wide Establishing Master Shot</span>
+        </div>
+        <div class="preview-frame">
+          <svg viewBox="0 0 480 270" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <rect width="480" height="270" fill="#0D121D"/>
+            <rect y="0" width="480" height="24" fill="#000000"/>
+            <rect y="246" width="480" height="24" fill="#000000"/>
+            <!-- Window & wall -->
+            <rect x="100" y="50" width="70" height="90" fill="#141E30" stroke="#1E2C44" stroke-width="2"/>
+            <line x1="135" y1="50" x2="135" y2="140" stroke="#1E2C44" stroke-width="2"/>
+            <!-- Desk & Monitor on right -->
+            <polygon points="310,130 460,90 480,240 310,240" fill="#1B2A4A" opacity="0.35"/>
+            <rect x="400" y="110" width="12" height="60" fill="#3A5A8C"/>
+            <polygon points="400,110 320,135 320,185 400,170" fill="#64B5F6" opacity="0.4"/>
+            <!-- Desk -->
+            <rect x="290" y="170" width="150" height="8" fill="#2C3440"/>
+            <line x1="310" y1="178" x2="310" y2="246" stroke="#2C3440" stroke-width="4"/>
+            <line x1="420" y1="178" x2="420" y2="246" stroke="#2C3440" stroke-width="4"/>
+            <!-- Ayo silhouette hunched -->
+            <circle cx="340" cy="140" r="18" fill="#613729"/>
+            <path d="M 320,165 Q 340,155 355,170 L 350,210 L 325,210 Z" fill="#D2A23E"/>
+            <rect x="325" y="210" width="25" height="36" fill="#222222"/>
+            <!-- Clock text -->
+            <text x="375" y="165" font-family="monospace" font-size="9" fill="#00E676">1:07 AM</text>
+            <text x="240" y="260" font-family="sans-serif" font-size="11" fill="#EDE6D6" text-anchor="middle">"It started with one word."</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="beat-title">Beat 1: Midnight Trance (The Hook)</h3>
+          <div class="detail-row"><span class="label">Camera:</span> <span class="val">Eye-level 28mm wide, locked tripod (NO digital zoom)</span></div>
+          <div class="detail-row"><span class="label">Focal Point:</span> <span class="val">Ayo hunched at desk on the right third, surrounded by dark negative space</span></div>
+          <div class="detail-row"><span class="label">Action:</span> <span class="val">Ayo sits frozen, staring unblinkingly at the blue screen. Minimal 2% chest breathing. Fingers motionless on keyboard.</span></div>
+          <div class="detail-row"><span class="label">Lighting:</span> <span class="val">85% Cold Blue (#1B2A4A, 6500K), 15% Deep Midnight Shadow (#0D121D)</span></div>
+          <div class="detail-row"><span class="label">Audio:</span> <span class="val">60 BPM mechanical clock tick enters at t=0s. 45 Hz sub-bass drone at t=2s.</span></div>
+          <div class="caption-box">
+            <span class="caption-label">Caption:</span> "It started with one word."
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="scene-card" id="scene-2">
+        <div class="card-header">
+          <span class="badge scene-badge">SCENE 02</span>
+          <span class="badge duration-badge">8s (00:08 - 00:16)</span>
+          <span class="badge shot-badge">Low-Angle Cutaway Close-Up</span>
+        </div>
+        <div class="preview-frame">
+          <svg viewBox="0 0 480 270" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <rect width="480" height="270" fill="#0D121D"/>
+            <rect y="0" width="480" height="24" fill="#000000"/>
+            <rect y="246" width="480" height="24" fill="#000000"/>
+            <!-- Floor line -->
+            <line x1="0" y1="210" x2="480" y2="210" stroke="#1A2234" stroke-width="2"/>
+            <!-- Running shoes -->
+            <ellipse cx="200" cy="190" rx="35" ry="18" fill="#E89D42" opacity="0.85"/>
+            <ellipse cx="200" cy="186" rx="28" ry="12" fill="#D2A23E"/>
+            <ellipse cx="250" cy="195" rx="35" ry="18" fill="#E89D42" opacity="0.95"/>
+            <ellipse cx="250" cy="191" rx="28" ry="12" fill="#F4B860"/>
+            <!-- Sketchbook -->
+            <polygon points="100,175 160,165 175,200 115,210" fill="#EDE6D6" stroke="#C4B59D" stroke-width="2"/>
+            <line x1="105" y1="180" x2="165" y2="170" stroke="#A89B85" stroke-width="1"/>
+            <!-- Subtle dust motes -->
+            <circle cx="180" cy="150" r="1.5" fill="#E89D42" opacity="0.6"/>
+            <circle cx="230" cy="140" r="2" fill="#E89D42" opacity="0.8"/>
+            <circle cx="280" cy="160" r="1.5" fill="#E89D42" opacity="0.5"/>
+            <text x="240" y="260" font-family="sans-serif" font-size="11" fill="#EDE6D6" text-anchor="middle">"Later was always easier than now."</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="beat-title">Beat 2: The Dormant Props (Cutaway Contrast)</h3>
+          <div class="detail-row"><span class="label">Camera:</span> <span class="val">Low ground angle, 50mm macro, static camera (NO zoom)</span></div>
+          <div class="detail-row"><span class="label">Focal Point:</span> <span class="val">A pair of clean running shoes and an unopened sketchbook on the floor</span></div>
+          <div class="detail-row"><span class="label">Action:</span> <span class="val">Cutaway prop shot: no character body visible, only Ayo's slippers resting motionless in upper frame. Running shoes untouched.</span></div>
+          <div class="detail-row"><span class="label">Lighting:</span> <span class="val">60% Midnight Shadow (#0D121D), 40% Warm Amber Rim (#E89D42)</span></div>
+          <div class="detail-row"><span class="label">Audio:</span> <span class="val">Clock tick continues at 60 BPM. Distant cold wind ambience.</span></div>
+          <div class="caption-box">
+            <span class="caption-label">Caption:</span> "Later was always easier than now."
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="scene-card" id="scene-3">
+        <div class="card-header">
+          <span class="badge scene-badge">SCENE 03</span>
+          <span class="badge duration-badge">10s (00:16 - 00:26)</span>
+          <span class="badge shot-badge">Tight Medium Close-Up</span>
+        </div>
+        <div class="preview-frame">
+          <svg viewBox="0 0 480 270" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <rect width="480" height="270" fill="#0A0E17"/>
+            <rect y="0" width="480" height="24" fill="#000000"/>
+            <rect y="246" width="480" height="24" fill="#000000"/>
+            <!-- Monitor light beam from right -->
+            <polygon points="480,60 480,210 270,170 270,100" fill="#64B5F6" opacity="0.15"/>
+            <!-- Ayo profile close-up -->
+            <ellipse cx="230" cy="130" rx="65" ry="70" fill="#613729"/>
+            <!-- Hoodie hood -->
+            <path d="M 160,110 Q 180,50 250,65 Q 220,140 180,190 Z" fill="#D2A23E"/>
+            <path d="M 160,190 L 260,190 L 270,246 L 150,246 Z" fill="#D2A23E"/>
+            <!-- Cold highlight on face edge -->
+            <path d="M 280,100 Q 295,130 280,165" stroke="#90CAF9" stroke-width="4" fill="none" opacity="0.8"/>
+            <!-- Eye tired -->
+            <ellipse cx="265" cy="125" rx="10" ry="12" fill="#FFFFFF"/>
+            <ellipse cx="268" cy="126" rx="6" ry="7" fill="#151515"/>
+            <ellipse cx="270" cy="124" rx="2" ry="2" fill="#64B5F6"/>
+            <!-- Tired brow -->
+            <path d="M 255,108 Q 272,112 280,118" stroke="#222222" stroke-width="3" fill="none"/>
+            <text x="240" y="260" font-family="sans-serif" font-size="11" fill="#EDE6D6" text-anchor="middle">"Just ten more minutes."</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="beat-title">Beat 3: The Rationalization (Face Tension)</h3>
+          <div class="detail-row"><span class="label">Camera:</span> <span class="val">Direct profile 50mm, steady locked camera</span></div>
+          <div class="detail-row"><span class="label">Focal Point:</span> <span class="val">Ayo's face in side profile; screen reflection flickering across dark eyes</span></div>
+          <div class="detail-row"><span class="label">Action:</span> <span class="val">Ayo blinks slowly twice. A subtle swallow and brow furrow as rationalization occurs. Fingers tap one single key.</span></div>
+          <div class="detail-row"><span class="label">Lighting:</span> <span class="val">70% Cold Blue Screen Bounce (#3A5A8C), 30% Pitch Black (#0A0E17)</span></div>
+          <div class="detail-row"><span class="label">Audio:</span> <span class="val">Clock tick slows by 5%, keyboard tap click, sub-bass pulse.</span></div>
+          <div class="caption-box">
+            <span class="caption-label">Caption:</span> "Just ten more minutes."
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="scene-card" id="scene-4">
+        <div class="card-header">
+          <span class="badge scene-badge">SCENE 04</span>
+          <span class="badge duration-badge">12s (00:26 - 00:38)</span>
+          <span class="badge shot-badge">High-Angle Wide Shot (Looking Down)</span>
+        </div>
+        <div class="preview-frame">
+          <svg viewBox="0 0 480 270" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <rect width="480" height="270" fill="#090D14"/>
+            <rect y="0" width="480" height="24" fill="#000000"/>
+            <rect y="246" width="480" height="24" fill="#000000"/>
+            <!-- Room isometric floor lines -->
+            <polygon points="50,220 240,150 430,220 240,246" fill="#101724"/>
+            <!-- Ayo tiny at desk -->
+            <rect x="290" y="170" width="60" height="40" fill="#1E2A3C"/>
+            <circle cx="310" cy="165" r="9" fill="#613729"/>
+            <rect x="304" y="174" width="12" height="15" fill="#D2A23E"/>
+            <!-- The Shade rising behind -->
+            <path d="M 170,220 Q 150,130 190,80 Q 240,70 230,140 Q 240,190 220,220 Z" fill="#040608" opacity="0.95"/>
+            <!-- Glowing slit eyes -->
+            <line x1="185" y1="105" x2="200" y2="105" stroke="#9CC4FF" stroke-width="2.5"/>
+            <line x1="208" y1="105" x2="223" y2="105" stroke="#9CC4FF" stroke-width="2.5"/>
+            <text x="240" y="260" font-family="sans-serif" font-size="11" fill="#EDE6D6" text-anchor="middle">"Every excuse fed it."</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="beat-title">Beat 4: The Birth of The Beast</h3>
+          <div class="detail-row"><span class="label">Camera:</span> <span class="val">High 45-degree angle looking down at bedroom, static camera</span></div>
+          <div class="detail-row"><span class="label">Focal Point:</span> <span class="val">Ayo at desk, and a smoky obsidian shadow detaching from the floor behind him</span></div>
+          <div class="detail-row"><span class="label">Action:</span> <span class="val">Ayo continues scrolling. Behind him, the obsidian Shade rises smoothly to ceiling height.</span></div>
+          <div class="detail-row"><span class="label">Lighting:</span> <span class="val">90% Cold Blue/Navy (#121927), 10% Pale Blue Slit Eyes (#9CC4FF)</span></div>
+          <div class="detail-row"><span class="label">Audio:</span> <span class="val">Clock tick muffles (low-pass filter @ 300Hz), deep organic rumble (38 Hz).</span></div>
+          <div class="caption-box">
+            <span class="caption-label">Caption:</span> "Every excuse fed it."
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="scene-card" id="scene-5">
+        <div class="card-header">
+          <span class="badge scene-badge">SCENE 05</span>
+          <span class="badge duration-badge">12s (00:38 - 00:50)</span>
+          <span class="badge shot-badge">Close-Up Digital Clock & Eye Reflection</span>
+        </div>
+        <div class="preview-frame">
+          <svg viewBox="0 0 480 270" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <rect width="480" height="270" fill="#080C14"/>
+            <rect y="0" width="480" height="24" fill="#000000"/>
+            <rect y="246" width="480" height="24" fill="#000000"/>
+            <!-- Digital Clock Face -->
+            <rect x="140" y="80" width="200" height="100" rx="12" fill="#131B28" stroke="#1E2A3A" stroke-width="3"/>
+            <text x="240" y="148" font-family="monospace" font-size="44" font-weight="bold" fill="#00E676" text-anchor="middle">2:41<tspan font-size="20"> AM</tspan></text>
+            <text x="240" y="260" font-family="sans-serif" font-size="11" fill="#EDE6D6" text-anchor="middle">"Tomorrow was already arriving."</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="beat-title">Beat 5: The Time Jump (2:41 AM)</h3>
+          <div class="detail-row"><span class="label">Camera:</span> <span class="val">Extreme Close-Up 85mm, static locked</span></div>
+          <div class="detail-row"><span class="label">Focal Point:</span> <span class="val">Digital clock numbers shifting from 1:07 to 2:41 AM</span></div>
+          <div class="detail-row"><span class="label">Action:</span> <span class="val">Numbers flick rapidly. Heavy tired blink.</span></div>
+          <div class="detail-row"><span class="label">Lighting:</span> <span class="val">10% Neon Green (#00E676), 90% Midnight Shadow (#080C14)</span></div>
+          <div class="detail-row"><span class="label">Audio:</span> <span class="val">Clock tick accelerates to 120 BPM for 2 seconds, then abruptly cuts back to 60 BPM.</span></div>
+          <div class="caption-box">
+            <span class="caption-label">Caption:</span> "Tomorrow was already arriving."
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="scene-card" id="scene-6">
+        <div class="card-header">
+          <span class="badge scene-badge">SCENE 06</span>
+          <span class="badge duration-badge">15s (00:50 - 01:05)</span>
+          <span class="badge shot-badge">Over-the-Shoulder Medium Shot</span>
+        </div>
+        <div class="preview-frame">
+          <svg viewBox="0 0 480 270" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <rect width="480" height="270" fill="#0A0E18"/>
+            <rect y="0" width="480" height="24" fill="#000000"/>
+            <rect y="246" width="480" height="24" fill="#000000"/>
+            <!-- Bed -->
+            <rect x="120" y="130" width="260" height="90" rx="6" fill="#1B2436"/>
+            <ellipse cx="160" cy="150" rx="25" ry="15" fill="#2E3C54"/>
+            <!-- Ayo collapsed -->
+            <circle cx="210" cy="160" r="14" fill="#613729"/>
+            <rect x="220" y="155" width="60" height="25" rx="6" fill="#D2A23E"/>
+            <rect x="280" y="158" width="55" height="20" rx="4" fill="#222222"/>
+            <!-- The Shade draped above -->
+            <path d="M 100,100 Q 250,70 380,100 Q 300,140 200,135 Z" fill="#030508" opacity="0.9"/>
+            <text x="240" y="260" font-family="sans-serif" font-size="11" fill="#EDE6D6" text-anchor="middle">"He carried yesterday into his sleep."</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="beat-title">Beat 6: The Heavy Collapse</h3>
+          <div class="detail-row"><span class="label">Camera:</span> <span class="val">Over-the-shoulder looking down at unmade bed, static camera</span></div>
+          <div class="detail-row"><span class="label">Focal Point:</span> <span class="val">Ayo collapsing face down onto unmade mattress without changing clothes</span></div>
+          <div class="detail-row"><span class="label">Action:</span> <span class="val">Ayo steps toward bed, collapses heavily. Heavy exhale.</span></div>
+          <div class="detail-row"><span class="label">Lighting:</span> <span class="val">80% Dark Slate (#151B28), 20% Blue Screen Residual Bounce (#263852)</span></div>
+          <div class="detail-row"><span class="label">Audio:</span> <span class="val">Dull mattress thud, heavy sigh, clock tick fades into distant echo.</span></div>
+          <div class="caption-box">
+            <span class="caption-label">Caption:</span> "He carried yesterday into his sleep."
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="scene-card" id="scene-7">
+        <div class="card-header">
+          <span class="badge scene-badge">SCENE 07</span>
+          <span class="badge duration-badge">13s (01:05 - 01:18)</span>
+          <span class="badge shot-badge">Frontal Medium Shot (Bed Level)</span>
+        </div>
+        <div class="preview-frame">
+          <svg viewBox="0 0 480 270" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <rect width="480" height="270" fill="#151C28"/>
+            <rect y="0" width="480" height="24" fill="#000000"/>
+            <rect y="246" width="480" height="24" fill="#000000"/>
+            <!-- Blinds grey light slats -->
+            <line x1="50" y1="60" x2="160" y2="60" stroke="#333E4F" stroke-width="4"/>
+            <line x1="50" y1="75" x2="160" y2="75" stroke="#333E4F" stroke-width="4"/>
+            <line x1="50" y1="90" x2="160" y2="90" stroke="#333E4F" stroke-width="4"/>
+            <!-- Bed & Ayo head emerging -->
+            <rect x="180" y="140" width="220" height="80" fill="#202A3C"/>
+            <circle cx="210" cy="140" r="16" fill="#613729"/>
+            <!-- Phone on nightstand -->
+            <rect x="110" y="150" width="30" height="50" rx="4" fill="#64B5F6" opacity="0.9"/>
+            <!-- Hand reaching -->
+            <path d="M 180,148 Q 150,152 135,160" stroke="#613729" stroke-width="10" stroke-linecap="round" fill="none"/>
+            <text x="240" y="260" font-family="sans-serif" font-size="11" fill="#EDE6D6" text-anchor="middle">"Morning brought no clean slate."</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="beat-title">Beat 7: Morning Guilt (7:15 AM Alarm)</h3>
+          <div class="detail-row"><span class="label">Camera:</span> <span class="val">Low eye level, 35mm locked static</span></div>
+          <div class="detail-row"><span class="label">Focal Point:</span> <span class="val">Ayo's hand slapping the phone alarm, eyes bloodshot and swollen</span></div>
+          <div class="detail-row"><span class="label">Action:</span> <span class="val">Hand reaches out sluggishly, silences alarm, pulls blanket back over head.</span></div>
+          <div class="detail-row"><span class="label">Lighting:</span> <span class="val">70% Murky Grey (#333E4F), 30% Phone Screen Flash (#FFFFFF)</span></div>
+          <div class="detail-row"><span class="label">Audio:</span> <span class="val">Harsh piercing smartphone alarm, abrupt silence on tap, heavy muffled groan.</span></div>
+          <div class="caption-box">
+            <span class="caption-label">Caption:</span> "Morning brought no clean slate."
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="scene-card" id="scene-8">
+        <div class="card-header">
+          <span class="badge scene-badge">SCENE 08</span>
+          <span class="badge duration-badge">12s (01:18 - 01:30)</span>
+          <span class="badge shot-badge">Two-Shot Mirror Framing</span>
+        </div>
+        <div class="preview-frame">
+          <svg viewBox="0 0 480 270" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <rect width="480" height="270" fill="#121824"/>
+            <rect y="0" width="480" height="24" fill="#000000"/>
+            <rect y="246" width="480" height="24" fill="#000000"/>
+            <!-- Mirror frame -->
+            <rect x="140" y="45" width="200" height="165" rx="8" fill="#1C273A" stroke="#374862" stroke-width="4"/>
+            <!-- Reflection of Ayo -->
+            <circle cx="220" cy="125" r="24" fill="#613729"/>
+            <path d="M 190,155 L 250,155 L 260,205 L 180,205 Z" fill="#D2A23E"/>
+            <!-- The Shade reflection looming -->
+            <path d="M 230,60 Q 280,45 300,100 Q 310,170 260,190 Z" fill="#040608"/>
+            <line x1="260" y1="85" x2="275" y2="85" stroke="#9CC4FF" stroke-width="2.5"/>
+            <line x1="282" y1="85" x2="297" y2="85" stroke="#9CC4FF" stroke-width="2.5"/>
+            <text x="240" y="260" font-family="sans-serif" font-size="11" fill="#EDE6D6" text-anchor="middle">"He wasn't fighting time. He was feeding it."</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="beat-title">Beat 8: The Mirror Confrontation</h3>
+          <div class="detail-row"><span class="label">Camera:</span> <span class="val">Looking directly into bathroom mirror, static tripod</span></div>
+          <div class="detail-row"><span class="label">Focal Point:</span> <span class="val">Ayo staring into his own reflection, with The Shade towering behind his shoulder</span></div>
+          <div class="detail-row"><span class="label">Action:</span> <span class="val">Ayo splashes water on face, looks up into the glass. Freezes as he sees the slit eyes behind him.</span></div>
+          <div class="detail-row"><span class="label">Lighting:</span> <span class="val">80% Cold Fluorescent White (#A8BED6), 20% Deep Shadow (#0B0F16)</span></div>
+          <div class="detail-row"><span class="label">Audio:</span> <span class="val">Faucet water dripping: drip... drip... drip... (40 BPM cadence).</span></div>
+          <div class="caption-box">
+            <span class="caption-label">Caption:</span> "He wasn't fighting time. He was feeding it."
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="scene-card" id="scene-9">
+        <div class="card-header">
+          <span class="badge scene-badge">SCENE 09</span>
+          <span class="badge duration-badge">12s (01:30 - 01:42)</span>
+          <span class="badge shot-badge">Extreme Close-Up (Eyes & Breath)</span>
+        </div>
+        <div class="preview-frame">
+          <svg viewBox="0 0 480 270" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <rect width="480" height="270" fill="#0A0E18"/>
+            <rect y="0" width="480" height="24" fill="#000000"/>
+            <rect y="246" width="480" height="24" fill="#000000"/>
+            <!-- Eyes Macro Close-Up -->
+            <ellipse cx="180" cy="130" rx="45" ry="32" fill="#FFFFFF"/>
+            <ellipse cx="185" cy="130" rx="20" ry="22" fill="#181818"/>
+            <ellipse cx="190" cy="126" rx="5" ry="5" fill="#E89D42"/>
+            <ellipse cx="300" cy="130" rx="45" ry="32" fill="#FFFFFF"/>
+            <ellipse cx="305" cy="130" rx="20" ry="22" fill="#181818"/>
+            <ellipse cx="310" cy="126" rx="5" ry="5" fill="#E89D42"/>
+            <!-- Firm brow, determined -->
+            <path d="M 130,105 Q 180,95 230,105" stroke="#613729" stroke-width="6" fill="none"/>
+            <path d="M 250,105 Q 300,95 350,105" stroke="#613729" stroke-width="6" fill="none"/>
+            <text x="240" y="260" font-family="sans-serif" font-size="11" fill="#EDE6D6" text-anchor="middle">"Tomorrow has no hands."</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="beat-title">Beat 9: The Turning Point (DEAD SILENCE)</h3>
+          <div class="detail-row"><span class="label">Camera:</span> <span class="val">Macro 100mm on Ayo's eyes, static locked</span></div>
+          <div class="detail-row"><span class="label">Focal Point:</span> <span class="val">Ayo's eyes widen slightly; pupil contracts. The realization takes hold.</span></div>
+          <div class="detail-row"><span class="label">Action:</span> <span class="val">Ayo stops splashing water. Complete stillness. His eyes lock onto his own pupils.</span></div>
+          <div class="detail-row"><span class="label">Lighting:</span> <span class="val">50% Cold Blue Reflection (#3A5A8C), 50% Amber Dawn Ray (#E89D42)</span></div>
+          <div class="detail-row"><span class="label">Audio:</span> <span class="val">COMPLETE DEAD SILENCE (-60 dB). Zero audio for 3.5 seconds.</span></div>
+          <div class="caption-box">
+            <span class="caption-label">Caption:</span> "Tomorrow has no hands."
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="scene-card" id="scene-10">
+        <div class="card-header">
+          <span class="badge scene-badge">SCENE 10</span>
+          <span class="badge duration-badge">12s (01:42 - 01:54)</span>
+          <span class="badge shot-badge">Medium Full Shot (Action Staging)</span>
+        </div>
+        <div class="preview-frame">
+          <svg viewBox="0 0 480 270" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <rect width="480" height="270" fill="#182030"/>
+            <rect y="0" width="480" height="24" fill="#000000"/>
+            <rect y="246" width="480" height="24" fill="#000000"/>
+            <!-- Golden sun beam cutting across -->
+            <polygon points="0,50 180,50 480,246 220,246" fill="#F39C12" opacity="0.3"/>
+            <!-- Ayo tying shoes -->
+            <circle cx="210" cy="120" r="18" fill="#613729"/>
+            <path d="M 195,138 L 235,138 L 225,185 L 185,185 Z" fill="#D2A23E"/>
+            <rect x="185" y="185" width="40" height="30" fill="#222222"/>
+            <!-- Hands tying laces -->
+            <circle cx="230" cy="195" r="7" fill="#613729"/>
+            <circle cx="240" cy="195" r="7" fill="#613729"/>
+            <!-- Shoes on feet -->
+            <ellipse cx="235" cy="215" rx="20" ry="10" fill="#E89D42"/>
+            <text x="240" y="260" font-family="sans-serif" font-size="11" fill="#EDE6D6" text-anchor="middle">"You have to starve it in the light."</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="beat-title">Beat 10: The Physical Reversal</h3>
+          <div class="detail-row"><span class="label">Camera:</span> <span class="val">Low tracking 35mm, crisp lateral profile</span></div>
+          <div class="detail-row"><span class="label">Focal Point:</span> <span class="val">Ayo bends down, laces the running shoes, snaps laptop shut</span></div>
+          <div class="detail-row"><span class="label">Action:</span> <span class="val">Ayo's mitten hands firmly pull the shoe laces tight. He stands upright with shoulders back.</span></div>
+          <div class="detail-row"><span class="label">Lighting:</span> <span class="val">70% Warm Amber Dawn (#F39C12, 3000K), 30% Fading Blue (#1B2A4A)</span></div>
+          <div class="detail-row"><span class="label">Audio:</span> <span class="val">Crisp shoe lace pull, resonant mechanical laptop SNAP, warm uplifting cello swell.</span></div>
+          <div class="caption-box">
+            <span class="caption-label">Caption:</span> "You have to starve it in the light."
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="scene-card" id="scene-11">
+        <div class="card-header">
+          <span class="badge scene-badge">SCENE 11</span>
+          <span class="badge duration-badge">14s (01:54 - 02:08)</span>
+          <span class="badge shot-badge">Wide Wide Doorway Shot</span>
+        </div>
+        <div class="preview-frame">
+          <svg viewBox="0 0 480 270" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <rect width="480" height="270" fill="#FFF4E0"/>
+            <rect y="0" width="480" height="24" fill="#000000"/>
+            <rect y="246" width="480" height="24" fill="#000000"/>
+            <!-- Doorway silhouette frame -->
+            <rect x="0" y="24" width="160" height="222" fill="#1A2234"/>
+            <rect x="320" y="24" width="160" height="222" fill="#1A2234"/>
+            <rect x="160" y="24" width="160" height="30" fill="#1A2234"/>
+            <!-- Ayo walking forward in golden light -->
+            <circle cx="240" cy="115" r="15" fill="#222222"/>
+            <rect x="230" y="130" width="20" height="35" rx="4" fill="#D2A23E"/>
+            <rect x="232" y="165" width="8" height="40" fill="#222222"/>
+            <rect x="242" y="165" width="8" height="38" fill="#222222"/>
+            <!-- Fading smoke wisps in doorway -->
+            <path d="M 180,180 Q 200,140 190,100" stroke="#8892A0" stroke-width="3" stroke-dasharray="4,4" fill="none" opacity="0.4"/>
+            <text x="240" y="260" font-family="sans-serif" font-size="11" fill="#1A2234" text-anchor="middle">"It only lives where you refuse to go."</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="beat-title">Beat 11: The Dissolution of The Shade</h3>
+          <div class="detail-row"><span class="label">Camera:</span> <span class="val">Looking through open apartment doorway toward the rising morning sun</span></div>
+          <div class="detail-row"><span class="label">Focal Point:</span> <span class="val">Ayo's silhouette walking out into the sunlit street; behind him, The Shade dissolves into thin harmless steam</span></div>
+          <div class="detail-row"><span class="label">Action:</span> <span class="val">Ayo walks steadily across the threshold. The front door clicks shut behind him.</span></div>
+          <div class="detail-row"><span class="label">Lighting:</span> <span class="val">85% Blinding Dawn Amber (#FFF4E0, #F39C12), 15% Dissolving Obsidian Steam</span></div>
+          <div class="detail-row"><span class="label">Audio:</span> <span class="val">Door latch click, bird chirps outside, rising triumphant brass/strings chord.</span></div>
+          <div class="caption-box">
+            <span class="caption-label">Caption:</span> "It only lives where you refuse to go."
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="scene-card" id="scene-12">
+        <div class="card-header">
+          <span class="badge scene-badge">SCENE 12</span>
+          <span class="badge duration-badge">22s (02:08 - 02:30)</span>
+          <span class="badge shot-badge">Wide Cinematic Street View $\to$ Title Card</span>
+        </div>
+        <div class="preview-frame">
+          <svg viewBox="0 0 480 270" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+            <rect width="480" height="270" fill="#0C1018"/>
+            <rect y="0" width="480" height="24" fill="#000000"/>
+            <rect y="246" width="480" height="24" fill="#000000"/>
+            <!-- Golden horizon glow -->
+            <polygon points="0,170 480,170 480,246 0,246" fill="#141C2B"/>
+            <polygon points="0,170 240,110 480,170" fill="#E89D42" opacity="0.4"/>
+            <!-- Distant tiny Ayo running -->
+            <circle cx="240" cy="155" r="4" fill="#613729"/>
+            <rect x="238" y="159" width="4" height="8" fill="#D2A23E"/>
+            <!-- End Title -->
+            <text x="240" y="90" font-family="'Comic Sans MS', sans-serif" font-size="28" font-weight="bold" fill="#EDE6D6" text-anchor="middle">WAKELIT</text>
+            <text x="240" y="112" font-family="sans-serif" font-size="11" fill="#E89D42" letter-spacing="3" text-anchor="middle">EVERY NIGHT ENDS.</text>
+            <text x="240" y="260" font-family="sans-serif" font-size="11" fill="#EDE6D6" text-anchor="middle">"Wake up. It's time."</text>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3 class="beat-title">Beat 12: Resolution & Awakening (End Title)</h3>
+          <div class="detail-row"><span class="label">Camera:</span> <span class="val">Slow locked wide looking down the quiet morning avenue</span></div>
+          <div class="detail-row"><span class="label">Focal Point:</span> <span class="val">Ayo jogging into the distance as morning mist clears. Fades to Wakelit signature.</span></div>
+          <div class="detail-row"><span class="label">Action:</span> <span class="val">Ayo jogs with relaxed steady cadence into the golden distance. Fade to black.</span></div>
+          <div class="detail-row"><span class="label">Lighting:</span> <span class="val">100% Warm Golden Dawn (#F5B041)</span></div>
+          <div class="detail-row"><span class="label">Audio:</span> <span class="val">Footsteps crunching pavement, rhythmic breathing, peaceful acoustic guitar cadence.</span></div>
+          <div class="caption-box">
+            <span class="caption-label">Caption:</span> "Wake up. It's time."
+          </div>
+        </div>
+      </div>
+    
+  </div>
+</body>
+</html>

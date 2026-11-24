@@ -1,0 +1,40 @@
+{
+  "project": "the-beast-you-feed",
+  "testRun": "TEST 01 - Two-Scene Production Proof",
+  "plannedAt": "2026-11-24T18:49:00.000Z",
+  "targetCanvas": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30,
+    "letterboxBarsY": 96
+  },
+  "audio": {
+    "foleyTick": "input/assets/audio/sfx/sfx_clock_tick_60bpm.wav",
+    "subBass": "input/assets/audio/sfx/sfx_sub_bass_drone_45hz.wav",
+    "ambience": "input/assets/audio/sfx/amb_room_tone_night.wav"
+  },
+  "captions": [
+    { "start": "00:00:01", "end": "00:00:04", "text": "It started with one word." },
+    { "start": "00:00:04", "end": "00:00:08", "text": "He had a plan. He had time." },
+    { "start": "00:00:09", "end": "00:00:12", "text": "The shoes stayed by the door." },
+    { "start": "00:00:12", "end": "00:00:16", "text": "The blank page stayed white." }
+  ],
+  "timeline": [
+    {
+      "sceneId": "scene_001",
+      "type": "visual_clip",
+      "clipFile": "generated/scenes/scene_001.mp4",
+      "targetDuration": 8,
+      "transitionToNext": "hard_cut"
+    },
+    {
+      "sceneId": "scene_002",
+      "type": "visual_clip",
+      "clipFile": "generated/scenes/scene_002.mp4",
+      "targetDuration": 8,
+      "transitionToNext": "fade_to_black"
+    }
+  ],
+  "totalDurationSeconds": 16,
+  "outputFile": "output/the_beast_you_feed_test01_master.mp4"
+}

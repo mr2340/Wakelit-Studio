@@ -1,0 +1,37 @@
+{
+  "project": "you-said-tomorrow-yesterday",
+  "generatedAt": "2026-11-24T16:15:00.000Z",
+  "resolution": {
+    "width": 1920,
+    "height": 1080
+  },
+  "fps": 30,
+  "aspectRatio": "2.39:1",
+  "letterboxBars": {
+    "top": 96,
+    "bottom": 96,
+    "activeSafeHeight": 888
+  },
+  "totalDuration": 150,
+  "cutsCount": 12,
+  "timeline": [
+    { "sceneId": "scene_001", "start": 0, "end": 12, "duration": 12, "type": "clip", "transition": "fade_in_from_black", "transitionDuration": 0.5 },
+    { "sceneId": "scene_002", "start": 12, "end": 25, "duration": 13, "type": "clip", "transition": "cut" },
+    { "sceneId": "scene_003", "start": 25, "end": 38, "duration": 13, "type": "clip", "transition": "cut" },
+    { "sceneId": "scene_004", "start": 38, "end": 50, "duration": 12, "type": "clip", "transition": "cut" },
+    { "sceneId": "scene_005", "start": 50, "end": 64, "duration": 14, "type": "clip", "transition": "cut" },
+    { "sceneId": "scene_006", "start": 64, "end": 78, "duration": 14, "type": "clip", "transition": "cut" },
+    { "sceneId": "scene_007", "start": 78, "end": 88, "duration": 10, "type": "black_screen", "transition": "hard_cut_to_black", "audioSilence": true },
+    { "sceneId": "scene_008", "start": 88, "end": 100, "duration": 12, "type": "clip", "transition": "cut" },
+    { "sceneId": "scene_009", "start": 100, "end": 113, "duration": 13, "type": "clip", "transition": "cut" },
+    { "sceneId": "scene_010", "start": 113, "end": 125, "duration": 12, "type": "clip", "transition": "cut" },
+    { "sceneId": "scene_011", "start": 125, "end": 138, "duration": 13, "type": "clip", "transition": "cut" },
+    { "sceneId": "scene_012", "start": 138, "end": 150, "duration": 12, "type": "clip", "transition": "fade_to_black", "transitionDuration": 1.5 }
+  ],
+  "audioLayout": {
+    "foleyTrack": "assets/audio/sfx/",
+    "ambientDrone": "sub_bass_40hz.wav",
+    "deadSilenceAt": "1:18 - 1:28",
+    "targetLoudnessLUFS": -14
+  }
+}

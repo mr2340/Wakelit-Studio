@@ -1,0 +1,19 @@
+{
+  "project": "you-said-tomorrow-yesterday",
+  "plannedAt": "2026-11-24T16:15:00.000Z",
+  "productionMode": "silent",
+  "theme": "Procrastination, Delayed Ambition & The Myth of Tomorrow",
+  "framework": "Harmon Story Circle & Neurochemical Retention Loop",
+  "totalDuration": 150,
+  "scenesCount": 12,
+  "characterAnchor": "input/references/ayo_anchor.jpg",
+  "shadeAnchor": "input/references/the_shade_anchor.jpg",
+  "coreMessage": "Tomorrow is a fiction that feeds our internal demon. True sovereignty begins when we endure the cold and execute five minutes today.",
+  "pacingStyle": "High-retention visual pantomime, 60 BPM mechanical clock rhythm, 40Hz sub-bass escalation, 1.5s dead silence at 1:18, warm dawn orchestral catharsis",
+  "hasVoiceover": false,
+  "ghostWhispers": [
+    { "timestamp": "0:30", "line": "You'll feel ready tomorrow." },
+    { "timestamp": "1:22", "line": "Tomorrow never once arrived." },
+    { "timestamp": "2:25", "line": "Start." }
+  ]
+}

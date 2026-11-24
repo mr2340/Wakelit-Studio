@@ -1,0 +1,50 @@
+[
+  {
+    "id": "scene_001",
+    "beat": 1,
+    "phase": "Dopamine Hook / Ordinary Dark",
+    "purpose": "Establish Ayo hunched at desk in dark room, illuminated only by piercing cold blue screen glow",
+    "duration": 8,
+    "type": "visual_clip",
+    "character": "Ayo",
+    "environment": "dark minimalist bedroom illuminated by cold blue screen glow",
+    "action": "Ayo sits hunched at desk in dark room, illuminated only by piercing cold blue screen glow",
+    "expression": "tired, glazed eyes, burdened with guilt and avoidance",
+    "camera": "Slow push-in from wide shot",
+    "lighting": "Cold blue (#1B2A4A, 6500K)",
+    "foley": "60 BPM clock tick + phone buzz on wood",
+    "narration": "It started with one word. He had a plan. He had time.",
+    "references": [
+      "input/references/ayo_anchor.jpg"
+    ],
+    "prompt": "Use the attached character Ayo exactly as drawn in the master reference image. 2D flat minimalist cartoon animation, flat clean illustrated shapes, thin hand-drawn outline, zero 3D shading. Setting is dark minimalist bedroom illuminated by cold blue screen glow, flat side-on theatrical stage with no deep perspective. Slow push-in from wide shot, 2.39:1 widescreen letterbox composition. Ayo is a stylized minimalist character: round deep brown head #613729, mustard ochre hoodie #D2A23E with collar fold down, grey trousers #666668, white shoes #EDEEF0, mitten hands with thumb bump. No neck, no ears, no nose, no individual fingers, no hair. Ayo sits hunched at desk in dark room, illuminated only by piercing cold blue screen glow. Facial expression: tired, glazed eyes, burdened with guilt and avoidance. Black dot eyes with tiny white specular catchlights, expressive thick curved eyebrows carrying the emotional weight, subtle controlled 2% micro-movement. Lighting: Cold blue (#1B2A4A, 6500K). NEGATIVE CONSTRAINTS: strictly no 3D rendering, no CGI, no Octane render, no Unreal Engine, no photorealistic skin textures, no volumetric specular shading, no glossy highlights, no claymation or plastic vinyl shine, no realistic human anatomy, no nose, no ears, no neck, no fingers, no mitten fingers, no hair on Ayo, no extra characters, no camera shake, no blur, no text, no captions.",
+    "filename": "scene_001.mp4",
+    "status": "GENERATING",
+    "updatedAt": "2026-11-24T18:55:23.367Z",
+    "submittedAt": "2026-11-24T18:55:21.948Z",
+    "promptPreview": "Use the attached character Ayo exactly as drawn in the master reference image. 2",
+    "generationStartedAt": "2026-11-24T18:55:23.359Z"
+  },
+  {
+    "id": "scene_002",
+    "beat": 2,
+    "phase": "The Latent Ambition",
+    "purpose": "Ayo turns gaze towards dormant running shoes by door and blank sketchbook, finger hesitating on mouse",
+    "duration": 8,
+    "type": "visual_clip",
+    "character": "Ayo",
+    "environment": "dark minimalist bedroom with dormant running shoes by the closed door and a blank sketchbook on desk",
+    "action": "Ayo glances toward the dormant shoes by the door and blank sketchbook, but his mitten hand lingers hesitating on the mouse",
+    "expression": "guilty realization, worried curved eyebrows, subtle slow blink over 4 frames, shallow breathing",
+    "camera": "Medium shot, slight side angle, locked camera",
+    "lighting": "Dark slate navy shadows with cold blue desktop reflection",
+    "foley": "Fabric rustle + computer fan hum",
+    "narration": "The shoes stayed by the door. The blank page stayed white.",
+    "references": [
+      "input/references/ayo_anchor.jpg"
+    ],
+    "prompt": "Use the attached character Ayo exactly as drawn in the master reference image. 2D flat minimalist cartoon animation, flat clean illustrated shapes, thin hand-drawn outline, zero 3D shading. Setting is dark minimalist bedroom with dormant running shoes by the closed door and a blank sketchbook on desk, flat side-on theatrical stage with no deep perspective. Medium shot, slight side angle, locked camera, 2.39:1 widescreen letterbox composition. Ayo is a stylized minimalist character: round deep brown head #613729, mustard ochre hoodie #D2A23E with collar fold down, grey trousers #666668, white shoes #EDEEF0, mitten hands with thumb bump. No neck, no ears, no nose, no individual fingers, no hair. Ayo glances toward the dormant shoes by the door and blank sketchbook, but his mitten hand lingers hesitating on the mouse. Facial expression: guilty realization, worried curved eyebrows, subtle slow blink over 4 frames, shallow breathing. Lighting: Dark slate navy shadows with cold blue desktop reflection. NEGATIVE CONSTRAINTS: strictly no 3D rendering, no CGI, no Octane render, no Unreal Engine, no photorealistic skin textures, no volumetric specular shading, no glossy highlights, no claymation or plastic vinyl shine, no realistic human anatomy, no nose, no ears, no neck, no fingers, no mitten fingers, no hair on Ayo, no extra characters, no camera shake, no blur, no text, no captions.",
+    "filename": "scene_002.mp4",
+    "status": "PENDING"
+  }
+]
