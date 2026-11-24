@@ -1,0 +1,136 @@
+{
+  "video": "LUST VS LOVE _ An Animated Short Film.mp4",
+  "duration": 171.048299,
+  "width": 1280,
+  "height": 720,
+  "fps": "30/1",
+  "frames": [
+    {
+      "index": 0,
+      "timestampSeconds": 0,
+      "timestampFormatted": "00:00",
+      "file": "ref2_lust_vs_love_frame_000_0s.jpg"
+    },
+    {
+      "index": 1,
+      "timestampSeconds": 8,
+      "timestampFormatted": "00:08",
+      "file": "ref2_lust_vs_love_frame_001_8s.jpg"
+    },
+    {
+      "index": 2,
+      "timestampSeconds": 16,
+      "timestampFormatted": "00:16",
+      "file": "ref2_lust_vs_love_frame_002_16s.jpg"
+    },
+    {
+      "index": 3,
+      "timestampSeconds": 24,
+      "timestampFormatted": "00:24",
+      "file": "ref2_lust_vs_love_frame_003_24s.jpg"
+    },
+    {
+      "index": 4,
+      "timestampSeconds": 32,
+      "timestampFormatted": "00:32",
+      "file": "ref2_lust_vs_love_frame_004_32s.jpg"
+    },
+    {
+      "index": 5,
+      "timestampSeconds": 40,
+      "timestampFormatted": "00:40",
+      "file": "ref2_lust_vs_love_frame_005_40s.jpg"
+    },
+    {
+      "index": 6,
+      "timestampSeconds": 48,
+      "timestampFormatted": "00:48",
+      "file": "ref2_lust_vs_love_frame_006_48s.jpg"
+    },
+    {
+      "index": 7,
+      "timestampSeconds": 56,
+      "timestampFormatted": "00:56",
+      "file": "ref2_lust_vs_love_frame_007_56s.jpg"
+    },
+    {
+      "index": 8,
+      "timestampSeconds": 64,
+      "timestampFormatted": "01:04",
+      "file": "ref2_lust_vs_love_frame_008_64s.jpg"
+    },
+    {
+      "index": 9,
+      "timestampSeconds": 72,
+      "timestampFormatted": "01:12",
+      "file": "ref2_lust_vs_love_frame_009_72s.jpg"
+    },
+    {
+      "index": 10,
+      "timestampSeconds": 80,
+      "timestampFormatted": "01:20",
+      "file": "ref2_lust_vs_love_frame_010_80s.jpg"
+    },
+    {
+      "index": 11,
+      "timestampSeconds": 88,
+      "timestampFormatted": "01:28",
+      "file": "ref2_lust_vs_love_frame_011_88s.jpg"
+    },
+    {
+      "index": 12,
+      "timestampSeconds": 96,
+      "timestampFormatted": "01:36",
+      "file": "ref2_lust_vs_love_frame_012_96s.jpg"
+    },
+    {
+      "index": 13,
+      "timestampSeconds": 104,
+      "timestampFormatted": "01:44",
+      "file": "ref2_lust_vs_love_frame_013_104s.jpg"
+    },
+    {
+      "index": 14,
+      "timestampSeconds": 112,
+      "timestampFormatted": "01:52",
+      "file": "ref2_lust_vs_love_frame_014_112s.jpg"
+    },
+    {
+      "index": 15,
+      "timestampSeconds": 120,
+      "timestampFormatted": "02:00",
+      "file": "ref2_lust_vs_love_frame_015_120s.jpg"
+    },
+    {
+      "index": 16,
+      "timestampSeconds": 128,
+      "timestampFormatted": "02:08",
+      "file": "ref2_lust_vs_love_frame_016_128s.jpg"
+    },
+    {
+      "index": 17,
+      "timestampSeconds": 136,
+      "timestampFormatted": "02:16",
+      "file": "ref2_lust_vs_love_frame_017_136s.jpg"
+    },
+    {
+      "index": 18,
+      "timestampSeconds": 144,
+      "timestampFormatted": "02:24",
+      "file": "ref2_lust_vs_love_frame_018_144s.jpg"
+    },
+    {
+      "index": 19,
+      "timestampSeconds": 152,
+      "timestampFormatted": "02:32",
+      "file": "ref2_lust_vs_love_frame_019_152s.jpg"
+    },
+    {
+      "index": 20,
+      "timestampSeconds": 160,
+      "timestampFormatted": "02:40",
+      "file": "ref2_lust_vs_love_frame_020_160s.jpg"
+    }
+  ],
+  "contactSheet": "ref2_lust_vs_love_contact_sheet.jpg"
+}
