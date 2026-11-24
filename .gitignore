@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Large video files (generated scenes, reference mp4s, and master renders)
+*.mp4
+
+# Browser automation profile & sessions (contains cookies, tokens, cache)
+chrome-profile/
+
+# Temporary video processing and assembly
+**/planning/temp_assembly/
+**/planning/temp_test01/
+**/generated/frame_debug/
+
+# OS and Editor junk
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+.vscode/
+.idea/
+
+# Diagnostics & Playwright traces
+**/logs/*.html
+**/logs/*.png
+trace.zip
+
+# Environment variables
+.env
+.env.local

@@ -1,0 +1,38 @@
+{
+  "name": "ghd-automated-studio",
+  "version": "1.0.0",
+  "description": "Automated AI Video Production Studio for Google Flow and FFmpeg",
+  "main": "engine/project-manager.js",
+  "scripts": {
+    "flow:login": "node engine/flow-runner.js --login",
+    "flow:batch": "node engine/flow-runner.js",
+    "flow:login:cdp": "node engine/flow-runner.js --login --cdp",
+    "flow:batch:cdp": "node engine/flow-runner.js --cdp",
+    "flow:chrome": "powershell -Command \"Start-Process 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe' -ArgumentList '--remote-debugging-port=9222'\"",
+    "flow:diag": "node engine/flow-runner.js --diagnostics",
+    "studio:plan": "node engine/scene-planner.js",
+    "studio:storyboard": "node engine/storyboard-builder.js",
+    "studio:edit": "node engine/video-editor.js",
+    "studio:check": "node engine/quality-checker.js",
+    "studio:status": "node engine/project-manager.js status",
+    "studio:run": "node engine/project-manager.js run",
+    "test:story": "node test/story-developer-test.js",
+    "test": "node test/system-test.js"
+  },
+  "keywords": [
+    "ai-video",
+    "google-flow",
+    "ffmpeg",
+    "automation",
+    "production-studio"
+  ],
+  "author": "GHD Studio",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^14.0.3",
+    "dotenv": "^17.3.1",
+    "playwright": "^1.58.2",
+    "winston": "^3.19.0"
+  }
+}
