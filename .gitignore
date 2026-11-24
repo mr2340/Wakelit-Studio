@@ -2,8 +2,9 @@
 node_modules/
 package-lock.json
 
-# Large video files (generated scenes, reference mp4s, and master renders)
+# Large video & audio files (generated scenes, reference media, master renders, foley wavs)
 *.mp4
+*.wav
 
 # Browser automation profile & sessions (contains cookies, tokens, cache)
 chrome-profile/
@@ -11,6 +12,8 @@ chrome-profile/
 # Temporary video processing and assembly
 **/planning/temp_assembly/
 **/planning/temp_test01/
+**/planning/temp_master_assembly/
+**/output/downloaded_tiles/
 **/generated/frame_debug/
 
 # OS and Editor junk

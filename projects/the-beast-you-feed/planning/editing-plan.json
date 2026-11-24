@@ -1,40 +1,181 @@
 {
   "project": "the-beast-you-feed",
-  "testRun": "TEST 01 - Two-Scene Production Proof",
-  "plannedAt": "2026-11-24T18:49:00.000Z",
+  "title": "The Beast You Feed Every Night - Full Production Master",
+  "generatedAt": "2026-11-24T20:50:27.608Z",
   "targetCanvas": {
     "width": 1920,
     "height": 1080,
     "fps": 30,
-    "letterboxBarsY": 96
+    "letterboxBarsY": 96,
+    "activePictureHeight": 888
   },
   "audio": {
-    "foleyTick": "input/assets/audio/sfx/sfx_clock_tick_60bpm.wav",
+    "clockTick": "input/assets/audio/sfx/sfx_clock_tick_60bpm.wav",
     "subBass": "input/assets/audio/sfx/sfx_sub_bass_drone_45hz.wav",
-    "ambience": "input/assets/audio/sfx/amb_room_tone_night.wav"
+    "roomTone": "input/assets/audio/sfx/amb_room_tone_night.wav",
+    "dawnPad": "input/assets/audio/sfx/amb_warm_dawn_pad.wav",
+    "birds": "input/assets/audio/sfx/amb_morning_birds.wav"
   },
   "captions": [
-    { "start": "00:00:01", "end": "00:00:04", "text": "It started with one word." },
-    { "start": "00:00:04", "end": "00:00:08", "text": "He had a plan. He had time." },
-    { "start": "00:00:09", "end": "00:00:12", "text": "The shoes stayed by the door." },
-    { "start": "00:00:12", "end": "00:00:16", "text": "The blank page stayed white." }
+    {
+      "sceneId": "scene_001",
+      "start": 0.5,
+      "end": 3.8,
+      "text": "It started with one word."
+    },
+    {
+      "sceneId": "scene_002",
+      "start": 4.5,
+      "end": 7.8,
+      "text": "Later was always easier than now."
+    },
+    {
+      "sceneId": "scene_003",
+      "start": 8.5,
+      "end": 11.8,
+      "text": "You'll feel ready tomorrow."
+    },
+    {
+      "sceneId": "scene_004",
+      "start": 12.5,
+      "end": 15.8,
+      "text": "Every excuse fed it."
+    },
+    {
+      "sceneId": "scene_005",
+      "start": 16.5,
+      "end": 19.8,
+      "text": "Tomorrow was already arriving."
+    },
+    {
+      "sceneId": "scene_006",
+      "start": 20.5,
+      "end": 23.8,
+      "text": "He carried yesterday into his sleep."
+    },
+    {
+      "sceneId": "scene_007",
+      "start": 24.5,
+      "end": 27,
+      "text": "Tomorrow has never once arrived."
+    },
+    {
+      "sceneId": "scene_008",
+      "start": 27.5,
+      "end": 30.8,
+      "text": "He wasn't fighting time. He was feeding it."
+    },
+    {
+      "sceneId": "scene_009",
+      "start": 31.5,
+      "end": 34.8,
+      "text": "Five minutes."
+    },
+    {
+      "sceneId": "scene_010",
+      "start": 35.5,
+      "end": 38.8,
+      "text": "You have to starve it in the light."
+    },
+    {
+      "sceneId": "scene_011",
+      "start": 39.5,
+      "end": 42.8,
+      "text": "It only lives where you refuse to go."
+    },
+    {
+      "sceneId": "scene_012",
+      "start": 43.5,
+      "end": 47.5,
+      "text": "Wake up. It's time."
+    }
   ],
   "timeline": [
     {
       "sceneId": "scene_001",
       "type": "visual_clip",
       "clipFile": "generated/scenes/scene_001.mp4",
-      "targetDuration": 8,
+      "targetDuration": 4,
       "transitionToNext": "hard_cut"
     },
     {
       "sceneId": "scene_002",
       "type": "visual_clip",
       "clipFile": "generated/scenes/scene_002.mp4",
-      "targetDuration": 8,
+      "targetDuration": 4,
+      "transitionToNext": "hard_cut"
+    },
+    {
+      "sceneId": "scene_003",
+      "type": "visual_clip",
+      "clipFile": "generated/scenes/scene_003.mp4",
+      "targetDuration": 4,
+      "transitionToNext": "hard_cut"
+    },
+    {
+      "sceneId": "scene_004",
+      "type": "visual_clip",
+      "clipFile": "generated/scenes/scene_004.mp4",
+      "targetDuration": 4,
+      "transitionToNext": "hard_cut"
+    },
+    {
+      "sceneId": "scene_005",
+      "type": "visual_clip",
+      "clipFile": "generated/scenes/scene_005.mp4",
+      "targetDuration": 4,
+      "transitionToNext": "hard_cut"
+    },
+    {
+      "sceneId": "scene_006",
+      "type": "visual_clip",
+      "clipFile": "generated/scenes/scene_006.mp4",
+      "targetDuration": 4,
       "transitionToNext": "fade_to_black"
+    },
+    {
+      "sceneId": "scene_007",
+      "type": "black_screen",
+      "clipFile": "generated/scenes/scene_007.mp4",
+      "targetDuration": 3,
+      "transitionToNext": "hard_cut"
+    },
+    {
+      "sceneId": "scene_008",
+      "type": "visual_clip",
+      "clipFile": "generated/scenes/scene_008.mp4",
+      "targetDuration": 4,
+      "transitionToNext": "hard_cut"
+    },
+    {
+      "sceneId": "scene_009",
+      "type": "visual_clip",
+      "clipFile": "generated/scenes/scene_009.mp4",
+      "targetDuration": 4,
+      "transitionToNext": "hard_cut"
+    },
+    {
+      "sceneId": "scene_010",
+      "type": "visual_clip",
+      "clipFile": "generated/scenes/scene_010.mp4",
+      "targetDuration": 4,
+      "transitionToNext": "hard_cut"
+    },
+    {
+      "sceneId": "scene_011",
+      "type": "visual_clip",
+      "clipFile": "generated/scenes/scene_011.mp4",
+      "targetDuration": 4,
+      "transitionToNext": "hard_cut"
+    },
+    {
+      "sceneId": "scene_012",
+      "type": "visual_clip",
+      "clipFile": "generated/scenes/scene_012.mp4",
+      "targetDuration": 5,
+      "transitionToNext": "hard_cut"
     }
   ],
-  "totalDurationSeconds": 16,
-  "outputFile": "output/the_beast_you_feed_test01_master.mp4"
+  "totalDurationSeconds": 48,
+  "outputFile": "output/the_beast_you_feed_full_production_master.mp4"
 }

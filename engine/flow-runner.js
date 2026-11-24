@@ -332,12 +332,16 @@ class FlowRunner {
     this.log(`Waiting for generation completion and download event for ${scene.id}...`);
 
     const genWaitStart = Date.now();
+    const tilesLocator = page.locator('flow-video-tile');
+    const initialTileCount = await tilesLocator.count().catch(() => 0);
+    this.log(`Current video tiles on canvas before generation: ${initialTileCount}`);
+
     const downloadPromise = page.waitForEvent('download', { timeout: this.generationTimeoutMs });
 
     // Look for download triggers if automatic download does not trigger
     const downloadResult = await Promise.race([
       downloadPromise,
-      this.monitorAndTriggerDownload(page)
+      this.monitorAndTriggerDownload(page, initialTileCount)
     ]);
     timing.generationWaitMs = Date.now() - genWaitStart;
 
@@ -371,8 +375,8 @@ class FlowRunner {
   /**
    * Monitors the workspace for completed video generation and triggers 720p download.
    */
-  async monitorAndTriggerDownload(page) {
-    this.log('Monitoring workspace for generation completion and download controls...');
+  async monitorAndTriggerDownload(page, initialTileCount = 0) {
+    this.log(`Monitoring workspace for generation completion (initial tiles: ${initialTileCount})...`);
     const startTime = Date.now();
     const pollInterval = 2500;
 
@@ -391,15 +395,19 @@ class FlowRunner {
         }
       }
 
-      // Check for video tiles on canvas
+      // Check for video tiles on canvas (Google Flow prepends the newest tile at the top: tiles.first())
       const tiles = page.locator('flow-video-tile');
       const tileCount = await tiles.count().catch(() => 0);
 
-      if (tileCount > 0) {
+      if (tileCount > initialTileCount || tileCount > 0) {
         const tile = tiles.first();
         const box = await tile.boundingBox().catch(() => null);
-        if (box) {
-          this.log(`Hovering active video tile at (${Math.round(box.x + box.width/2)}, ${Math.round(box.y + box.height/2)})...`);
+
+        // Check if tile is actively rendering
+        const isGenerating = await tile.locator('mat-progress-bar, mat-spinner, [role="progressbar"], .generating, [aria-label*="Generating" i]').isVisible({ timeout: 200 }).catch(() => false);
+
+        if (box && !isGenerating) {
+          this.log(`Hovering top video tile (total tiles: ${tileCount}) at (${Math.round(box.x + box.width/2)}, ${Math.round(box.y + box.height/2)})...`);
           await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
           await page.waitForTimeout(600);
 
