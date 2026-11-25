@@ -9,6 +9,7 @@ remotion-poc/out/
 # Large video & audio files (generated scenes, reference media, master renders, foley wavs)
 *.mp4
 *.wav
+*.aac
 
 # Browser automation profile & sessions (contains cookies, tokens, cache)
 chrome-profile/
@@ -18,6 +19,7 @@ chrome-profile/
 **/planning/temp_test01/
 **/planning/temp_master_assembly/
 **/planning/temp_2to3min/
+**/planning/temp_silent_master/
 **/output/downloaded_tiles/
 **/generated/frame_debug/
 

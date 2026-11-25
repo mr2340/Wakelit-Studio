@@ -1,8 +1,10 @@
-# COMPLETE PUBLISHING PACKAGE: THE BEAST YOU FEED EVERY NIGHT [RECOMMENDED]
+# COMPLETE PUBLISHING PACKAGE: THE BEAST YOU FEED EVERY NIGHT [PRODUCTION-READY RELEASE]
 
-> **Master Video Deliverable:** `projects/the-beast-you-feed/output/the_beast_you_feed_full_production_master.mp4`  
-> **Master Technical Specs:** 1920x1080 @ 30.0 fps, 48.000s, H.264 High Profile, AAC 48kHz Stereo (-14 LUFS).  
-> **Visual Identity:** 2.39:1 Letterbox (96px cinematic bars), Comic Relief burned typography.
+> **Master Video Deliverable:** [the_beast_you_feed_silent_master.mp4](file:///c:/Users/USER/OneDrive/Documents/projects/wakelit%20production/projects/the-beast-you-feed/output/the_beast_you_feed_silent_master.mp4)  
+> **Master Technical Specs:** 1920x1080 @ 30.0 fps, **122.500s (2m 02.5s)**, H.264 High Profile, AAC Stereo (-14 LUFS).  
+> **Soundtrack Style:** Reference Video 2 (`LUST VS LOVE`) / Zero Voiceover / 8 Tactile Foley Tracks / 0.0dB Dead Silence in Scene 7.  
+> **Primary Thumbnail:** [thumbnail_master.jpg](file:///c:/Users/USER/OneDrive/Documents/projects/wakelit%20production/projects/the-beast-you-feed/output/thumbnail_master.jpg) (Day One standard: `STOP FEEDING IT.` + floating neon app icons + red LED 3:00 AM clock).  
+> **A/B Test Thumbnail:** [thumbnail_dayone_rotting.jpg](file:///c:/Users/USER/OneDrive/Documents/projects/wakelit%20production/projects/the-beast-you-feed/output/thumbnail_dayone_rotting.jpg) (`YOU'RE ROTTING.`).
 
 ---
 
@@ -10,72 +12,74 @@
 
 ### Primary Title (Recommended)
 ```
-The Beast You Feed Every Night
+The Beast You Feed Every Night (An Animated Short)
 ```
-*CTR Rationale:* 30 characters. High intrinsic curiosity gap; personifies procrastination as a tangible living entity that feeds on inaction. Matches Tier 1 research criteria.
+*CTR Rationale:* 49 characters. High intrinsic curiosity gap; personifies procrastination as a tangible living entity that feeds on inaction. Matches Day One Films and Pursuit of Wonder viral benchmarks (1.5M–8M views).
 
 ### Alternative A/B Test Titles
-1. **Curiosity / Moral Mirror:**  
-   `It Started With Just One Tomorrow.` (35 characters)
-2. **Consequence / Direct Psychological Reality:**  
-   `You're Not Tired. You're Hiding.` (32 characters)
-3. **Third-Person Narrative Parable:**  
-   `The Cost of Tomorrow | An Animated Short Film` (45 characters)
+1. **Relatable Pain-Point:**  
+   `Why You Keep Choosing Tomorrow Over Today` (42 characters)
+2. **Existential Confrontation:**  
+   `The Ghost In Your Mirror: A Film About Avoiding Your Life` (57 characters)
+3. **Micro-Commitment Trap:**  
+   `It Started With "Just 5 More Minutes"` (37 characters)
 
 ---
 
 ## 2. YouTube Metadata & Description Box
 
-```
-"Tomorrow." 
+```text
+Every night begins the exact same way.
 
-It starts with a whisper. A single harmless postponement. 
-Then the hours slip away. 1:07 AM turns into 2:41 AM. 
+"Just ten more minutes."
+"I'll wake up early tomorrow."
+"One more video won't hurt."
 
-The Beast doesn't arrive as a monster. It arrives as comfort. 
-Every night you tell yourself you'll feel ready tomorrow, you feed the very thing keeping you trapped.
+You tell yourself it's harmless rest. But deep down, you know what's happening. You aren't resting. You're feeding something.
 
-Break the loop.
+Every time you choose the screen over your work, comfort over discipline, and tomorrow over today, the shadow grows heavier. Until one night, you look in the mirror and realize you don't recognize the person staring back.
+
+This is a short animated film without words. It's about procrastination, quiet isolation, and the hard-won courage to lace up your shoes and step into the morning.
+
+Tomorrow doesn't exist. Today is all you will ever have.
 
 ---
+🎬 CREDITS:
+• Produced by: Wakelit Production Studio
+• Animation: Wakelit Hybrid 2D Engine
+• Music & Sound: Cinematic Foley & Instrumental Score
+• Protagonist: Ayo | The Shade: The Beast of Postponement
+• Runtime: 2:02
 
-🎬 FILM CREDITS:
-• Produced by: Wakelit Studio
-• Story & Direction: Wakelit Narrative Engine
-• Animation: 2D Stylized Animation via Wakelit Hybrid Pipeline
-• Sound Design & Foley: Wakelit Audio Engine (-14 LUFS Integrated)
-
-🔔 Subscribe to Wakelit for weekly animated parables on human agency, discipline, and overcoming midnight sedation.
-Every night ends.
-
-#Animation #Procrastination #Wakelit
+#Animation #ShortFilm #Procrastination #MentalHealth #Ayo #Wakelit #DayOneFilms #Discipline
 ```
 
 ---
 
 ## 3. SEO Tags & Search Keywords
 
-```
-procrastination, the beast you feed every night, animated short film, animated parable, 2d animation, ayo, wakelit, discipline, self improvement, digital addiction, doomscrolling, midnight trance, breaking bad habits, motivation animation, mental health short film, psychological animation, short film 2026, cinema 2d, stop wasting time, you said tomorrow yesterday, overcoming avoidance, delayed gratification, productive night routine, indie animation
+```text
+the beast you feed every night, animated short film, procrastination animation, day one films animation, lust vs love animated film, monk mode animation, how to stop procrastinating, midnight doomscrolling, digital sedation cartoon, cinematic 2d animation, ayo wakelit, overcoming avoidance, discipline animation, motivational animated short, psychological short film, why do i keep postponing, the monster in the mirror, art of consistency, creative burnout animation, sleep procrastination, cinematic storytelling, 2d character animation, warm amber dawn, wakelit studio, stop wasting your life
 ```
 
 ---
 
 ## 4. Pinned Community Comment
 
-```
-What is the one thing you keep telling yourself you'll start "tomorrow"? 
+```text
+What is the one dream or promise you keep postponing until "tomorrow"? 
 
-Drop it in the comments below. Write it down, snap the laptop shut, and start right now. No more feeding the beast. 👇
+Write it in the comments below, close the apps, and take the first step tonight. No more feeding the beast. 👇
 ```
 
 ---
 
-## 5. Master Thumbnail Specification
+## 5. Master Thumbnail Specifications
 
-- **File Path:** `projects/the-beast-you-feed/output/thumbnail_master.jpg` (1280x720 / 1920x1080, < 2MB).
+- **Primary Asset:** `projects/the-beast-you-feed/output/thumbnail_master.jpg` (1280x720, 103 KB).
 - **Focal Hierarchy:**
-  1. *Focal Point 1 (Left 40%):* Ayo in mustard hoodie (`#D2A23E`), face lit in cold cyan monitor wash (`#1B2A4A`), eyes half-lidded in exhaustion.
-  2. *Focal Point 2 (Right Background 60%):* The Shade—smoky obsidian silhouette looming in room darkness with glowing pale-blue horizontal slit eyes (`#9CC4FF`) staring directly at the viewer.
-  3. *Typography (Centered Top or Right):* Maximum 3 words in massive bold white Comic Relief: `"STOP FEEDING IT."` with `"FEEDING"` highlighted in warm amber (`#E89D42`).
-  4. *Contrast & Legibility:* Minimum 7:1 contrast ratio against the background; instantly legible at 120px mobile thumbnail scale.
+  1. *Headline (Top-Anchored):* Heavyweight white font with 14px black outline: `"STOP FEEDING IT."`. Kept clear of the bottom-right mobile timestamp.
+  2. *Mirror Reflection:* Ayo in his mustard hoodie (`#D2A23E`), sweating, wide pupils, staring into the dark bathroom glass.
+  3. *Looming Threat:* The Shade rising behind Ayo with piercing horizontal pale-blue slit eyes (`#9CC4FF`).
+  4. *Addiction Cues:* Floating glowing neon icons for YouTube, TikTok, and Instagram in the room atmosphere.
+  5. *Time Stamp:* Glowing red LED digital clock in the corner reading `3:00 AM`.
