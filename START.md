@@ -1,7 +1,8 @@
 # START.md — WAKELIT MASTER STARTUP SYSTEM & OPERATING MANUAL
 
 > **"Every night ends."**  
-> *Official Entry Point, Navigation Map, and Operating Standards for the Wakelit Automated AI Animation Studio.*
+> *Official Entry Point, Navigation Map, and Operating Standards for the Wakelit Automated AI Animation Studio.*  
+> **CRITICAL MANDATORY LAW:** Always review [knowledge/studio-standards-and-rules-lock.md](file:///c:/Users/USER/OneDrive/Documents/projects/wakelit%20production/knowledge/studio-standards-and-rules-lock.md) before writing scripts, editing audio, or building scenes.
 
 ---
 

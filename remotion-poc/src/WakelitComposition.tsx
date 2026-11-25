@@ -6,29 +6,32 @@ import {
   staticFile,
   useCurrentFrame,
   useVideoConfig,
-  interpolate,
-  spring
+  spring,
+  interpolate
 } from 'remotion';
 
 export const WakelitComposition: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
 
-  // Subtle hand-drawn boiling wobble (±2.5px X/Y, ±0.3 deg)
-  const jitterX = Math.sin(frame * 2.1) * 2.5;
-  const jitterY = Math.cos(frame * 1.8) * 2.0;
-  const jitterRot = Math.sin(frame * 0.9) * 0.3;
+  // Subtle hand-drawn boiling wobble for shaking text (±2.5px X/Y, ±0.4 deg)
+  const jitterX = Math.sin(frame * 2.3) * 2.5;
+  const jitterY = Math.cos(frame * 1.9) * 2.0;
+  const jitterRot = Math.sin(frame * 1.1) * 0.4;
 
-  // Scene 1 Spring Pop Entrance (0 - 15 frames)
-  const scene1Pop = spring({
-    frame,
+  // Scene 1: Black Card Timing (0 - 75 frames / 0.0s - 2.5s)
+  // Text typewriter reveal + Amber Pill Pop at frame 25
+  const pillPop = spring({
+    frame: frame - 25,
     fps,
-    config: { damping: 14, mass: 0.5, stiffness: 120 }
+    config: { damping: 12, mass: 0.4, stiffness: 140 }
   });
 
-  // Scene 2 Spring Pop Entrance (120 - 135 frames)
+  const scene1FadeOut = interpolate(frame, [65, 75], [1, 0], { extrapolateRight: 'clamp' });
+
+  // Scene 2: Visual Scene Timing (75 - 195 frames / 2.5s - 6.5s)
   const scene2Pop = spring({
-    frame: frame - 120,
+    frame: frame - 78,
     fps,
     config: { damping: 14, mass: 0.5, stiffness: 120 }
   });
@@ -42,12 +45,58 @@ export const WakelitComposition: React.FC = () => {
         height: 1080,
         position: 'relative',
         overflow: 'hidden',
-        fontFamily: '"Comic Relief", "Comic Sans MS", cursive, sans-serif'
+        fontFamily: '"Comic Sans MS", "Comic Relief", cursive, sans-serif'
       }}
     >
-      {/* ================= V1: SCENE VIDEO LAYERS ================= */}
-      {/* Scene 1: Midnight Trance (Frames 0 to 120 / 4.0s) */}
-      <Sequence from={0} durationInFrames={120}>
+      {/* ================= SCENE 1: BLACK BACKGROUND HOOK (0 - 75 frames / 0.0s - 2.5s) ================= */}
+      <Sequence from={0} durationInFrames={75}>
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundColor: '#000000',
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            opacity: scene1FadeOut
+          }}
+        >
+          <div
+            style={{
+              fontSize: 64,
+              fontWeight: 'bold',
+              color: '#EDE6D6',
+              textShadow: '0 0 5px #181818, -3px -3px 0 #181818, 3px -3px 0 #181818, -3px 3px 0 #181818, 3px 3px 0 #181818',
+              display: 'inline-flex',
+              alignItems: 'center'
+            }}
+          >
+            It started with just one&nbsp;
+            {frame >= 25 && (
+              <span
+                style={{
+                  backgroundColor: '#E89D42',
+                  color: '#111111',
+                  padding: '4px 22px',
+                  borderRadius: '9999px',
+                  textShadow: 'none',
+                  fontWeight: 900,
+                  transform: `scale(${pillPop})`,
+                  transformOrigin: 'center center',
+                  display: 'inline-block'
+                }}
+              >
+                video
+              </span>
+            )}
+            &nbsp;.
+          </div>
+        </div>
+      </Sequence>
+
+      {/* ================= SCENE 2: VISUALS WITH SHAKING CAPTIONS (75 - 195 frames / 2.5s - 6.5s) ================= */}
+      <Sequence from={75} durationInFrames={120}>
+        {/* Letterboxed Visual Layer */}
         <div
           style={{
             position: 'absolute',
@@ -68,109 +117,37 @@ export const WakelitComposition: React.FC = () => {
             }}
           />
         </div>
-      </Sequence>
 
-      {/* Scene 2: Latent Ambition / Running Shoes (Frames 120 to 240 / 4.0s) */}
-      <Sequence from={120} durationInFrames={120}>
-        <div
-          style={{
-            position: 'absolute',
-            top: 96,
-            left: 0,
-            width: 1920,
-            height: 888,
-            overflow: 'hidden'
-          }}
-        >
-          <Video
-            src={staticFile('scene_002.mp4')}
-            style={{
-              width: 1920,
-              height: 1080,
-              marginTop: -96,
-              objectFit: 'cover'
-            }}
-          />
-        </div>
-      </Sequence>
-
-      {/* ================= V4: KINETIC CAPTIONS LAYER ================= */}
-      {/* Scene 1 Caption: "It started with one [night] ." */}
-      <Sequence from={0} durationInFrames={115}>
+        {/* Shaking / Boiling Caption Overlay */}
         <div
           style={{
             position: 'absolute',
             left: 0,
             right: 0,
-            bottom: 120,
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            transform: `translate(${jitterX}px, ${jitterY}px) rotate(${jitterRot}deg) scale(${scene1Pop})`,
-            transformOrigin: 'center bottom',
-            pointerEvents: 'none'
-          }}
-        >
-          <span
-            style={{
-              fontSize: 54,
-              fontWeight: 'bold',
-              color: '#EDE6D6',
-              textShadow: '0 0 4px #181818, -3px -3px 0 #181818, 3px -3px 0 #181818, -3px 3px 0 #181818, 3px 3px 0 #181818',
-              display: 'inline-flex',
-              alignItems: 'center'
-            }}
-          >
-            It started with one&nbsp;
-            <span
-              style={{
-                backgroundColor: '#E89D42',
-                color: '#111111',
-                padding: '2px 16px',
-                borderRadius: '9999px',
-                textShadow: 'none',
-                fontWeight: 900,
-                display: 'inline-block'
-              }}
-            >
-              night
-            </span>
-            &nbsp;.
-          </span>
-        </div>
-      </Sequence>
-
-      {/* Scene 2 Caption: "He had a plan." */}
-      <Sequence from={120} durationInFrames={115}>
-        <div
-          style={{
-            position: 'absolute',
-            left: 0,
-            right: 0,
-            bottom: 120,
+            bottom: 125,
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
             transform: `translate(${jitterX}px, ${jitterY}px) rotate(${jitterRot}deg) scale(${scene2Pop})`,
             transformOrigin: 'center bottom',
-            pointerEvents: 'none'
+            pointerEvents: 'none',
+            zIndex: 100
           }}
         >
           <span
             style={{
-              fontSize: 54,
+              fontSize: 52,
               fontWeight: 'bold',
               color: '#EDE6D6',
-              textShadow: '0 0 4px #181818, -3px -3px 0 #181818, 3px -3px 0 #181818, -3px 3px 0 #181818, 3px 3px 0 #181818'
+              textShadow: '0 0 5px #181818, -3px -3px 0 #181818, 3px -3px 0 #181818, -3px 3px 0 #181818, 3px 3px 0 #181818'
             }}
           >
-            He had a plan.
+            He told himself he was just unwinding.
           </span>
         </div>
       </Sequence>
 
-      {/* ================= V6: CINEMATIC LETTERBOX BARS (96px) ================= */}
-      {/* Top Bar */}
+      {/* ================= CINEMATIC LETTERBOX BARS (96px) ================= */}
       <div
         style={{
           position: 'absolute',
@@ -182,7 +159,6 @@ export const WakelitComposition: React.FC = () => {
           zIndex: 999
         }}
       />
-      {/* Bottom Bar */}
       <div
         style={{
           position: 'absolute',
@@ -195,19 +171,16 @@ export const WakelitComposition: React.FC = () => {
         }}
       />
 
-      {/* ================= AUDIO TRACKS ================= */}
-      {/* Room Tone Ambience Bed */}
+      {/* ================= AUDIO: SFX & BED ================= */}
       <Audio
         src={staticFile('amb_room_tone_night.wav')}
-        volume={0.5}
+        volume={0.4}
       />
-
-      {/* Mechanical Clock Ticks (60 BPM = tick every 30 frames) */}
-      {[0, 30, 60, 90, 120, 150, 180, 210].map((frameOffset) => (
+      {[75, 105, 135, 165].map((frameOffset) => (
         <Sequence key={frameOffset} from={frameOffset} durationInFrames={30}>
           <Audio
             src={staticFile('sfx_clock_tick_60bpm.wav')}
-            volume={0.8}
+            volume={0.6}
           />
         </Sequence>
       ))}
