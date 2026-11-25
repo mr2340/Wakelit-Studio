@@ -17,6 +17,7 @@ chrome-profile/
 **/planning/temp_assembly/
 **/planning/temp_test01/
 **/planning/temp_master_assembly/
+**/planning/temp_2to3min/
 **/output/downloaded_tiles/
 **/generated/frame_debug/
 

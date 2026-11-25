@@ -1,0 +1,125 @@
+{
+  "project": "sample-project",
+  "inspectedAt": "2026-11-25T08:55:13.152Z",
+  "scenesTotal": 5,
+  "scenesPassed": 5,
+  "scenesFailed": 0,
+  "scenesMissing": 0,
+  "sceneDetails": [
+    {
+      "id": "scene_001",
+      "type": "visual_clip",
+      "expectedDuration": 10,
+      "file": "scene_001.mp4",
+      "exists": true,
+      "actualDuration": 2520,
+      "validCodec": true,
+      "status": "completed",
+      "visualCheck": {
+        "letterbox": "PASS",
+        "flat2D": "PASS"
+      },
+      "issues": [],
+      "resolution": "1920x1080",
+      "thumbnail": "output\\qc_thumbs\\thumb_scene_001.jpg"
+    },
+    {
+      "id": "scene_002",
+      "type": "visual_clip",
+      "expectedDuration": 10,
+      "file": "scene_002.mp4",
+      "exists": true,
+      "actualDuration": 2520,
+      "validCodec": true,
+      "status": "completed",
+      "visualCheck": {
+        "letterbox": "PASS",
+        "flat2D": "PASS"
+      },
+      "issues": [],
+      "resolution": "1920x1080",
+      "thumbnail": "output\\qc_thumbs\\thumb_scene_002.jpg"
+    },
+    {
+      "id": "scene_003",
+      "type": "black_screen",
+      "expectedDuration": 3,
+      "file": "scene_003.mp4",
+      "exists": true,
+      "actualDuration": 0,
+      "validCodec": false,
+      "status": "VERIFIED",
+      "visualCheck": {
+        "letterbox": "PASS",
+        "flat2D": "PASS"
+      },
+      "issues": []
+    },
+    {
+      "id": "scene_004",
+      "type": "visual_clip",
+      "expectedDuration": 10,
+      "file": "scene_004.mp4",
+      "exists": true,
+      "actualDuration": 2520,
+      "validCodec": true,
+      "status": "completed",
+      "visualCheck": {
+        "letterbox": "PASS",
+        "flat2D": "PASS"
+      },
+      "issues": [],
+      "resolution": "1920x1080",
+      "thumbnail": "output\\qc_thumbs\\thumb_scene_004.jpg"
+    },
+    {
+      "id": "scene_005",
+      "type": "visual_clip",
+      "expectedDuration": 10,
+      "file": "scene_005.mp4",
+      "exists": true,
+      "actualDuration": 2520,
+      "validCodec": true,
+      "status": "completed",
+      "visualCheck": {
+        "letterbox": "PASS",
+        "flat2D": "PASS"
+      },
+      "issues": [],
+      "resolution": "1920x1080",
+      "thumbnail": "output\\qc_thumbs\\thumb_scene_005.jpg"
+    }
+  ],
+  "visualFidelityGate": {
+    "allFlat2D": true,
+    "letterboxCompliant": true,
+    "characterConsistencyChecks": [
+      "Ayo: #613729 head, #D2A23E mustard hoodie, #666668 trousers, mitten hands",
+      "Anatomy: strictly no neck, no ears, no nose, no fingers",
+      "The Shade: smoky obsidian silhouette, horizontal pale-blue slit eyes (#9CC4FF)"
+    ],
+    "negativePromptAudit": "PASS - Strictly forbids 3D, CGI, Unreal Engine, Octane render, photorealism"
+  },
+  "finalVideo": {
+    "exists": true,
+    "durationSeconds": 2520,
+    "resolution": "1920x1080",
+    "hasAudio": true,
+    "issues": [
+      "DURATION_GATE_FAILURE: Final export duration (2520.0s) deviates by 2509.0s from expected target (11.0s). Acceptable tolerance is ±2s."
+    ],
+    "expectedDurationSeconds": 11,
+    "durationDeltaSeconds": 2509,
+    "durationCompliant": false,
+    "fps": "30/1",
+    "audioCodec": "aac",
+    "thumbnail": "output\\qc_thumbs\\thumb_final.jpg"
+  },
+  "technicalPass": false,
+  "requiresHumanJudgement": [
+    "Visual style alignment with flat 2D hand-drawn character design (zero 3D specular shine)",
+    "Ayo consistency: brown head (#613729), mustard hoodie (#D2A23E), mitten hands, no neck/ears/nose",
+    "The Shade consistency: smoky obsidian silhouette, horizontal pale-blue slit eyes (#9CC4FF)",
+    "Chromatic law: Cold blue (screen sedation) vs Warm amber (dawn and action)"
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "projectName": "sample-project",
+  "generatedAt": "2026-11-25T08:54:45.521Z",
+  "outputResolution": {
+    "width": 1920,
+    "height": 1080
+  },
+  "fps": 30,
+  "totalDurationSeconds": 11,
+  "audio": {
+    "voiceoverFile": null,
+    "voiceoverVolume": 1,
+    "backgroundMusicFile": null,
+    "backgroundMusicVolume": 0.15,
+    "stripSourceAudio": true
+  },
+  "timeline": [
+    {
+      "index": 1,
+      "sceneId": "scene_001",
+      "type": "visual_clip",
+      "clipFile": "generated/scenes/scene_001.mp4",
+      "targetDuration": 10,
+      "transitionIn": "fade_in_1s",
+      "transitionOut": "cut"
+    },
+    {
+      "index": 2,
+      "sceneId": "scene_002",
+      "type": "visual_clip",
+      "clipFile": "generated/scenes/scene_002.mp4",
+      "targetDuration": 10,
+      "transitionIn": "cut",
+      "transitionOut": "cut"
+    },
+    {
+      "index": 3,
+      "sceneId": "scene_003",
+      "type": "black_screen",
+      "clipFile": "generated/scenes/scene_003.mp4",
+      "targetDuration": 3,
+      "transitionIn": "cut",
+      "transitionOut": "cut"
+    },
+    {
+      "index": 4,
+      "sceneId": "scene_004",
+      "type": "visual_clip",
+      "clipFile": "generated/scenes/scene_004.mp4",
+      "targetDuration": 10,
+      "transitionIn": "cut",
+      "transitionOut": "cut"
+    },
+    {
+      "index": 5,
+      "sceneId": "scene_005",
+      "type": "visual_clip",
+      "clipFile": "generated/scenes/scene_005.mp4",
+      "targetDuration": 10,
+      "transitionIn": "cut",
+      "transitionOut": "fade_out_1s"
+    }
+  ],
+  "outputFile": "output/final_video.mp4"
+}
