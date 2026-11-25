@@ -20,6 +20,7 @@ chrome-profile/
 **/planning/temp_master_assembly/
 **/planning/temp_2to3min/
 **/planning/temp_silent_master/
+**/planning/temp_perfect_master/
 **/output/downloaded_tiles/
 **/generated/frame_debug/
 
