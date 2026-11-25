@@ -1,11 +1,45 @@
 # DEVELOPMENT STATUS: GHD AUTOMATED STUDIO
 
-**Last Updated:** 2026-11-24  
-**Current Phase:** First Full 12-Beat Master Production Film Delivered & Verified; Technical QC Passed; Git Synchronized.
+**Last Updated:** 2026-11-25  
+**Current Phase:** Production Revision 02 & Engine Audit 03 Complete: Duration QC Gate Passed, Intro Highlight System Documented, Hybrid Architecture Established, Remotion Proof-of-Concept Rendered & Evaluated.
 
 ---
 
 ## 1. Completed Features
+
+### Production Revision 02 & Production Engine Audit 03 Implemented [TESTED] [MEASURED]
+- **Duration QC Gate & 42-Minute Export Root Cause Resolution:**
+  - Diagnosed historical 42-minute export defect: caused by `amix=inputs=2:duration=longest` in unconstrained FFmpeg mixing and missing `-t` clip clamps when long BGM/ambient stems were attached.
+  - Fixed `engine/video-editor.js`: changed `amix` to `duration=first`, added `-shortest` flags, and enforced `-t ${editingPlan.totalDurationSeconds}` output duration clamping.
+  - Built strict automated Duration Validation Gate in `engine/quality-checker.js`: compares probed file duration against expected duration ($\pm 2.0$s tolerance). Rejects out-of-spec renders with `DURATION_GATE_FAILURE` and fails `technicalPass`.
+  - Added unit test in `test/system-test.js` validating rejection of simulated 42-minute video. All 29/29 tests passing (`npm test`).
+- **Intro & Caption Reference Tutorial Empirical Analysis:**
+  - Empirically audited `Lust Is Killing You..mp4` and `captions_subtle_BLACK_screen-blend.mp4` frame-by-frame (30 fps):
+    - `0.00s–0.07s`: Pure black silence.
+    - `0.07s–1.00s`: Typewriter appearance (`"It started with just one "`) at 22–25 glyphs/sec.
+    - `1.03s–1.13s`: Keyword pops in enclosed inside warm amber rounded pill (`#E89D42` / `#FF7A00`) with pitch black text (`#000000`).
+    - `1.13s–2.33s`: 1.20s static hold.
+    - `2.37s–2.60s`: 8-frame linear fade out.
+    - `2.60s–2.63s`: 1-frame pure black beat.
+    - `2.67s`: Hard cut into Scene 001 as audio bed hits.
+  - Authored [knowledge/intro-and-caption-reference.md](file:///c:/Users/USER/OneDrive/Documents/projects/wakelit%20production/knowledge/intro-and-caption-reference.md) and updated [knowledge/caption-guidelines.md](file:///c:/Users/USER/OneDrive/Documents/projects/wakelit%20production/knowledge/caption-guidelines.md).
+- **Audio Direction System & Sound Direction Sheet:**
+  - Authored [knowledge/audio-direction-system.md](file:///c:/Users/USER/OneDrive/Documents/projects/wakelit%20production/knowledge/audio-direction-system.md) establishing 6-track audio architecture: Spoken Whispers (A1), 60 BPM Clock Tick (A2), 45 Hz Sub-bass Drone (A3), Tactile Foley (A4), Room Tone/Birds (A5), and Dawn Pad (A6).
+  - Authored [projects/the-beast-you-feed/planning/sound-direction-sheet.md](file:///c:/Users/USER/OneDrive/Documents/projects/wakelit%20production/projects/the-beast-you-feed/planning/sound-direction-sheet.md) with cue-by-cue breakdown across all 12 beats, including the 0.0dB dead silence in Scene 007 and -14 LUFS master mix target.
+- **Character Acting & Movement System:**
+  - Authored [knowledge/character-acting-system.md](file:///c:/Users/USER/OneDrive/Documents/projects/wakelit%20production/knowledge/character-acting-system.md) codifying locked-camera pantomime, micro-motion hierarchy, gaze vectors, and The Shade's fluid obsidian dynamics.
+  - Authored [projects/the-beast-you-feed/planning/character-acting-direction.md](file:///c:/Users/USER/OneDrive/Documents/projects/wakelit%20production/projects/the-beast-you-feed/planning/character-acting-direction.md) detailing performance notes for all 12 beats.
+- **Hybrid 2D Animation Architecture:**
+  - Authored [knowledge/hybrid-animation-pipeline.md](file:///c:/Users/USER/OneDrive/Documents/projects/wakelit%20production/knowledge/hybrid-animation-pipeline.md) establishing clear separation of concerns: Generative AI (Flow Omni) for character pantomime; Programmatic 2D (HTML/CSS/SVG) for deterministic UI (clocks, phone screens, pills); and Programmatic Compositor (Remotion/FFmpeg) for multi-layer assembly.
+- **Flow Duration & Credit Economics Audit:**
+  - Verified Omni 1.2 Flash natively generates 4.03s clips (97 frames @ 24fps).
+  - Modeled credit economics in [knowledge/flow-credit-economics.md](file:///c:/Users/USER/OneDrive/Documents/projects/wakelit%20production/knowledge/flow-credit-economics.md): 1 credit per submission, 30% rejection buffer, monthly projections across 1, 2, 4, 8 films.
+- **Remotion Proof of Concept Rendered & Evaluated:**
+  - Built working React Remotion project in `remotion-poc/` (`WakelitComposition.tsx`).
+  - Rendered 8.0s master `remotion-poc/out/remotion_poc_master.mp4` (5.1 MB, 1920x1080@30fps, 240 frames) featuring 2 Flow scenes (`scene_001.mp4`, `scene_002.mp4`), procedural hand-drawn boiling wobble, spring-animated amber keyword pill, and synchronized 60 BPM audio tracks.
+  - Authored comparative benchmark in [knowledge/remotion-vs-ffmpeg-evaluation.md](file:///c:/Users/USER/OneDrive/Documents/projects/wakelit%20production/knowledge/remotion-vs-ffmpeg-evaluation.md): FFmpeg is 4–6x faster and zero-dependency for final assembly; Remotion/DOM is optimal for deterministic Tier 2 motion graphic pre-renders.
+- **Publishing Package Delivered:**
+  - Created [projects/the-beast-you-feed/output/publishing-package.md](file:///c:/Users/USER/OneDrive/Documents/projects/wakelit%20production/projects/the-beast-you-feed/output/publishing-package.md) with metadata, A/B title variants, 25 SEO tags, 3 hashtags, pinned engagement comment, and master thumbnail specs.
 
 ### First Full Master Video Delivered: "The Beast You Feed Every Night" [TESTED] [MEASURED]
 - **Deliverable:** `projects/the-beast-you-feed/output/the_beast_you_feed_full_production_master.mp4` (12.08 MB, 48.000s, 1920x1080@30fps).

@@ -1,0 +1,46 @@
+{
+  "dayonefilmsofficial": [
+    {
+      "id": "URwzQvDxKCQ",
+      "title": "YOUR BRAIN IS FRIED",
+      "file": "dayone_1_URwzQvDxKCQ_YOUR_BRAIN_IS_FRIED.jpg"
+    },
+    {
+      "id": "exSRuLu9sxg",
+      "title": "You're Not Broken.",
+      "file": "dayone_2_exSRuLu9sxg_You_Are_Not_Broken.jpg"
+    },
+    {
+      "id": "D8T891uWpiE",
+      "title": "SELF RESPECT | An Animated Short Film",
+      "file": "dayone_3_D8T891uWpiE_SELF_RESPECT.jpg"
+    },
+    {
+      "id": "V_kg3pz7fIk",
+      "title": "You Don't Have Time.",
+      "file": "dayone_4_V_kg3pz7fIk_You_Dont_Have_Time.jpg"
+    }
+  ],
+  "MonkModeFilms": [
+    {
+      "id": "teiFArJ2PFo",
+      "title": "COMFORT | An Animated Short Film",
+      "file": "monkmode_1_teiFArJ2PFo_COMFORT.jpg"
+    },
+    {
+      "id": "bGT1h4kuvbA",
+      "title": "LOOKSMAXXING | An Animated Short Film",
+      "file": "monkmode_2_bGT1h4kuvbA_LOOKSMAXXING.jpg"
+    },
+    {
+      "id": "imCsqtrWy_I",
+      "title": "HEARTBREAK | An Animated Short Film",
+      "file": "monkmode_3_imCsqtrWy_I_HEARTBREAK.jpg"
+    },
+    {
+      "id": "oz7dqtC3kGc",
+      "title": "AI | An Animated Short Film",
+      "file": "monkmode_4_oz7dqtC3kGc_AI.jpg"
+    }
+  ]
+}

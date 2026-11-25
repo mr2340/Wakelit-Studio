@@ -191,9 +191,10 @@ class VideoEditor {
       const bgmVol = editingPlan.audio.backgroundMusicVolume || 0.15;
       finalArgs.push(
         '-filter_complex',
-        `[1:a]volume=${voVol}[vo];[2:a]volume=${bgmVol}[bgm];[vo][bgm]amix=inputs=2:duration=longest[aout]`,
+        `[1:a]volume=${voVol}[vo];[2:a]volume=${bgmVol}[bgm];[vo][bgm]amix=inputs=2:duration=first[aout]`,
         '-map', '0:v',
-        '-map', '[aout]'
+        '-map', '[aout]',
+        '-shortest'
       );
     } else if (hasVo) {
       const voVol = editingPlan.audio.voiceoverVolume || 1.0;
@@ -201,7 +202,8 @@ class VideoEditor {
         '-filter_complex',
         `[1:a]volume=${voVol}[aout]`,
         '-map', '0:v',
-        '-map', '[aout]'
+        '-map', '[aout]',
+        '-shortest'
       );
     } else {
       // Add silent audio track if no voiceover
@@ -211,6 +213,11 @@ class VideoEditor {
         '-map', '1:a',
         '-shortest'
       );
+    }
+
+    // Explicitly clamp total duration to editing plan to prevent container bloat (e.g. 42-minute export defect)
+    if (editingPlan.totalDurationSeconds && editingPlan.totalDurationSeconds > 0) {
+      finalArgs.push('-t', String(editingPlan.totalDurationSeconds));
     }
 
     // Check for captions SRT in input/assets or planning

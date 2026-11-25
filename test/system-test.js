@@ -81,6 +81,12 @@ async function runTests() {
 
   // Test 5: Full Video Assembly
   console.log('\n--- Test 5: Video Assembly & Rendering ---');
+  // Explicitly set totalDurationSeconds to match synthetic 11s mock test assembly
+  const testPlan = reader.readEditingPlan();
+  if (testPlan) {
+    testPlan.totalDurationSeconds = 11;
+    reader.writeEditingPlan(testPlan);
+  }
   const finalVideo = await editor.assembleVideo();
   assert(fs.existsSync(finalVideo), 'Final assembled video exists');
   const finalStats = fs.statSync(finalVideo);
@@ -92,9 +98,27 @@ async function runTests() {
   const qcReport = await checker.runInspection();
   assert(qcReport.finalVideo.exists === true, 'QC detected final video');
   assert(qcReport.finalVideo.hasAudio === true, 'QC confirmed audio presence');
+  assert(qcReport.finalVideo.durationCompliant === true, `QC duration validation passed (${qcReport.finalVideo.durationSeconds}s matches expected ${qcReport.finalVideo.expectedDurationSeconds}s)`);
   assert(qcReport.technicalPass === true, 'QC overall technical pass achieved');
   assert(fs.existsSync(path.join(paths.output, 'qc-report.json')), 'QC JSON report saved');
   assert(fs.existsSync(path.join(paths.output, 'qc-report.md')), 'QC Markdown report saved');
+
+  // Test 6b: Duration Gate Rejection (Simulate 42-minute export failure)
+  console.log('\n--- Test 6b: Duration QC Gate Defect Detection (42-minute export prevention) ---');
+  const dummy42MinProbe = {
+    format: { duration: '2520.000000' }, // 42 minutes = 2520 seconds
+    streams: [
+      { codec_type: 'video', width: 1920, height: 1080, r_frame_rate: '30/1' },
+      { codec_type: 'audio', codec_name: 'aac' }
+    ]
+  };
+  const originalProbe = checker.probeMedia;
+  checker.probeMedia = () => dummy42MinProbe;
+  const failingReport = await checker.runInspection();
+  checker.probeMedia = originalProbe;
+  assert(failingReport.finalVideo.durationCompliant === false, 'Duration gate successfully rejected 42-minute video');
+  assert(failingReport.technicalPass === false, 'QC correctly failed technicalPass on duration violation');
+  assert(failingReport.finalVideo.issues.some(i => i.includes('DURATION_GATE_FAILURE')), 'DURATION_GATE_FAILURE error logged');
 
   // Test 7: Story Developer Engine Validation
   console.log('\n--- Test 7: Story Developer Engine Validation ---');

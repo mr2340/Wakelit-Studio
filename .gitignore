@@ -1,6 +1,10 @@
 # Dependencies
 node_modules/
+**/node_modules/
 package-lock.json
+
+# Remotion build outputs
+remotion-poc/out/
 
 # Large video & audio files (generated scenes, reference media, master renders, foley wavs)
 *.mp4

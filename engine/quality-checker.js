@@ -210,7 +210,26 @@ class QualityChecker {
         const vStream = finalProbe.streams?.find(s => s.codec_type === 'video');
         const aStream = finalProbe.streams?.find(s => s.codec_type === 'audio');
 
-        report.finalVideo.durationSeconds = parseFloat(finalProbe.format?.duration || 0);
+        const actualDuration = parseFloat(finalProbe.format?.duration || 0);
+        report.finalVideo.durationSeconds = actualDuration;
+
+        // DURATION VALIDATION GATE: Prevent 42-minute or bloated export defect [TESTED]
+        // Target duration from editing plan, creative brief, or calculated timeline sum
+        const expectedDuration = editingPlan?.totalDurationSeconds || 
+          scenes.reduce((sum, s) => sum + (s.duration || 0), 0) || 150;
+        const durationToleranceSeconds = 2.0; // max allowed drift: ±2.0 seconds
+
+        const durationDelta = Math.abs(actualDuration - expectedDuration);
+        report.finalVideo.expectedDurationSeconds = expectedDuration;
+        report.finalVideo.durationDeltaSeconds = parseFloat(durationDelta.toFixed(3));
+        report.finalVideo.durationCompliant = durationDelta <= durationToleranceSeconds;
+
+        if (!report.finalVideo.durationCompliant) {
+          const errMsg = `DURATION_GATE_FAILURE: Final export duration (${actualDuration.toFixed(1)}s) deviates by ${durationDelta.toFixed(1)}s from expected target (${expectedDuration.toFixed(1)}s). Acceptable tolerance is ±${durationToleranceSeconds}s.`;
+          this.error(errMsg);
+          report.finalVideo.issues.push(errMsg);
+        }
+
         if (vStream) {
           report.finalVideo.resolution = `${vStream.width}x${vStream.height}`;
           report.finalVideo.fps = vStream.r_frame_rate;
@@ -284,7 +303,7 @@ ${report.visualFidelityGate.characterConsistencyChecks.map(c => `  - ✅ ${c}`).
 
 ## Final Output Status
 - **File Present:** ${report.finalVideo.exists ? 'Yes' : 'No'}
-- **Duration:** ${report.finalVideo.durationSeconds.toFixed(2)} seconds
+- **Duration:** ${report.finalVideo.durationSeconds.toFixed(2)} seconds (Target: ${report.finalVideo.expectedDurationSeconds || 'N/A'}s | Delta: ${report.finalVideo.durationDeltaSeconds !== undefined ? report.finalVideo.durationDeltaSeconds + 's' : 'N/A'} | Gate: ${report.finalVideo.durationCompliant ? '✅ PASS' : '❌ FAIL'})
 - **Resolution:** ${report.finalVideo.resolution || 'N/A'}
 - **Audio Present:** ${report.finalVideo.hasAudio ? 'Yes' : 'No'}
 ${report.finalVideo.issues.length > 0 ? `\n### Issues:\n${report.finalVideo.issues.map(i => `- ❌ ${i}`).join('\n')}` : ''}

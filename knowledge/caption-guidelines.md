@@ -56,3 +56,12 @@ In programmatic video editing, captions are rendered as an isolated video layer:
 - White text on solid black background (`captions_subtle_BLACK_screen-blend.mp4`).
 - Composited over the video track using FFmpeg `blend=all_mode='screen'` or `colorkey=black` filter.
 - Guarantees zero degradation of underlying Flow visual clips.
+
+---
+
+## 6. The Opening Black Screen & Keyword Highlight Pill [MEASURED]
+As documented in [knowledge/intro-and-caption-reference.md](file:///c:/Users/USER/OneDrive/Documents/projects/wakelit%20production/knowledge/intro-and-caption-reference.md):
+- **Black-Screen Opening:** Begins on 2 frames of pure silence and blackness (`0.00s–0.07s`).
+- **Typewriter Progression:** Types clause letter-by-letter over 0.93s (`0.07s–1.00s`).
+- **Keyword Highlight Pill:** At `1.03s`, the final keyword pops in enclosed inside a warm amber pill box (`#E89D42` / `#FF7A00`) with rounded capsule corners (`border-radius: 9999px`) and pitch black text (`#000000`).
+- **Hold & Fade:** The complete card holds static for 1.20s (`1.13s–2.33s`), fades out over 8 frames (`2.37s–2.60s`), holds 1 pure black frame at `2.63s`, and hard cuts into Scene 001 at `2.67s` as audio hits.

@@ -1,0 +1,14 @@
+{
+  "name": "wakelit-remotion-poc",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "remotion render src/index.tsx WakelitComposition out/remotion_poc_master.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.260",
+    "ghd-automated-studio": "file:..",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.260"
+  }
+}

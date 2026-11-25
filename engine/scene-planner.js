@@ -180,11 +180,14 @@ class ScenePlanner {
   generateEditingPlan(scenes, voiceoverFiles) {
     const voFile = voiceoverFiles.length > 0 ? voiceoverFiles[0] : null;
 
+    const totalDurationSeconds = scenes.reduce((sum, s) => sum + (s.duration || 0), 0);
+
     const editingPlan = {
       projectName: this.projectName,
       generatedAt: new Date().toISOString(),
       outputResolution: { width: 1920, height: 1080 },
       fps: 30,
+      totalDurationSeconds: totalDurationSeconds,
       audio: {
         voiceoverFile: voFile ? `input/voiceover/${voFile}` : null,
         voiceoverVolume: 1.0,
